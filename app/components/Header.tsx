@@ -10,7 +10,7 @@ type Props = {};
 
 export default function Header({ }: Props) {
   return (
-    <header className="sticky top-0 z-20 mx-auto flex max-w-7xl items-center justify-between p-6 text-center">
+    <div className="sticky top-0 z-20 mx-auto flex max-w-7xl items-center justify-between p-6 text-center">
       <motion.div
         initial={{
           x: -500,
@@ -51,6 +51,6 @@ export default function Header({ }: Props) {
         <OrderNowButton />
         <Dropdown/>
       </motion.div>
-    </header>
+    </div>
   );
 }

@@ -16,6 +16,7 @@ body {
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
+        background-color: #D4A883;
 }
 
 @media (max-width: 480px) {

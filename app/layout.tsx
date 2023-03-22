@@ -1,5 +1,6 @@
 import Footer from "./components/Footer";
 import '../styles/globals.css'
+import { Metadata } from "next";
 
 export default function RootLayout({
     // Layouts must accept a children prop.
@@ -10,13 +11,11 @@ export default function RootLayout({
   }) {
     return (
       <html lang="en">
-
-<body className="-z-10 mx-auto h-screen snap-y snap-mandatory overflow-scroll text-zinc-50">
+<body className="">
 <main>
      {children}
 </main>
         {/* Footer */}
-        <Footer />
 </body>
       </html>
     );

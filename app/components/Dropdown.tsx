@@ -71,7 +71,7 @@ return (             <div className="relative">
                                       className={`${
                                         active ? "bg-zinc-900 text-orange-100 transition duration-300 ease-in-out" : ""
                                       } block whitespace-nowrap px-5 py-3`}
-                                      href="#"
+                                      href="/gallery"
                                     >
                                       Gallery
                                     </a>
