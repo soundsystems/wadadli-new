@@ -29,21 +29,19 @@ export default function HomePage() {
         alt="background treasure map texture"
         fill
         className="pointer-events-none z-0 h-screen w-screen object-cover object-center"/> */}
-        {/* Header */}
+        {/* Header TODO: make sticky */}
         <header>
         <Header />
         </header>
         {/* Hero */}
-        <section id="hero" className="flex h-auto snap-start flex-col items-center">
+        <section id="menu" className="flex h-auto snap-start flex-col items-center">
            {/* <Map /> */}
           <Image src={menu} alt="Wadadli Jerk Menu" height={1600} width={900} className="" />
         </section>
+        {/* TODO: make the footer sticky */}
         <footer className="sticky">
         <Footer />
         </footer>
-        {/* Menu
-        <section id="menu" className="snap-center"></section>  */}
-
 
         {/* <section id="gallery" className="h-screen snap-end">
           <Gallery />

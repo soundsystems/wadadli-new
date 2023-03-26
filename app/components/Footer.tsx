@@ -9,10 +9,10 @@ type Props = {}
 function Footer({}: Props) {
   return (
     <>
-    <div className='flex flex-col p-6'>
+    <div className='flex flex-col p-2'>
 <Subscribe/>
     </div>
-   <div className="flex justify-between px-11 pb-6">
+   <div className="flex justify-between px-11 pb-2">
         <SocialIcon
           className="transition duration-75 hover:scale-125"
           url="https://www.facebook.com/WadadliJerkpage/"

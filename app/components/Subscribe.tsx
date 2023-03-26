@@ -52,7 +52,7 @@ export default function Subscribe() {
             <span className="px-2 text-lg font-semibold uppercase text-orange-500 transition duration-500 group-hover:text-orange-100 md:inline-flex lg:text-lg">
               Subscribe &rarr;
               <input
-                className="bg-transparent px-4 text-sm text-orange-500 placeholder:text-orange-500 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-orange-500"
+                className="bg-transparent px-4 text-center text-sm text-orange-500 placeholder:text-orange-500 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-orange-500"
                 id="EMAIL"
                 autoFocus
                 required
