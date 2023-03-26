@@ -47,7 +47,7 @@ export default function Subscribe() {
         <form onSubmit={subscribe} className="mb-9 mt-4 flex flex-col">
           <button
             type="submit"
-            className="group relative mx-auto mb-8 flex items-center justify-center divide-x divide-orange-500 rounded-xl bg-zinc-50/60 p-4 leading-none shadow-lg shadow-zinc-900/75 transition duration-700 hover:divide-orange-200 hover:bg-zinc-900/90 hover:shadow-md"
+            className="group relative mx-auto mb-8 flex items-center justify-center divide-x divide-orange-500 rounded-xl bg-zinc-50/60 p-4 leading-none shadow-lg shadow-zinc-900/75 transition duration-500 hover:divide-orange-200 hover:bg-zinc-900/90 hover:shadow-md"
           >
             <span className="px-2 text-lg font-semibold uppercase text-orange-500 transition duration-500 group-hover:text-orange-100 md:inline-flex lg:text-lg">
               Subscribe &rarr;

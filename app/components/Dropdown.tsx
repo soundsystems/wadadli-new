@@ -12,7 +12,7 @@ return (             <div className="relative">
                       <Menu>
                         {({ open }) => (
                           <>
-                            <Menu.Button className="rounded-xl bg-zinc-50/60 p-2 text-orange-500 shadow-lg shadow-zinc-900/75 transition duration-700 ease-in-out hover:bg-zinc-900/90 hover:text-orange-200 hover:shadow-md focus:text-orange-100 focus:outline-none">
+                            <Menu.Button className="rounded-xl bg-zinc-50/60 p-2 text-orange-500 shadow-lg shadow-zinc-900/75 transition duration-300 ease-in-out hover:bg-zinc-900/90 hover:text-orange-200 hover:shadow-md focus:text-orange-100 focus:outline-none">
                             <motion.div  
                             whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
                             <Bars3Icon className="h-6 w-6" />

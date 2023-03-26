@@ -14,21 +14,21 @@ function Footer({}: Props) {
     </div>
    <div className="flex justify-between px-11 pb-6">
         <SocialIcon
-          className="hover:scale-110"
+          className="transition duration-75 hover:scale-125"
           url="https://www.facebook.com/WadadliJerkpage/"
           fgColor="black"
           bgColor="transparent"
           // bgColor="rgba(255, 255, 255, 0.440)"
         />
         <SocialIcon
-          className="hover:scale-110"
+          className="transition duration-75 hover:scale-125"
           url="https://www.instagram.com/wadadlijerk/?hl=en"
           fgColor="black"
           bgColor="transparent"
           // bgColor="rgba(255, 255, 255, 0.440)"
         />
         <SocialIcon
-          className="hover:scale-110"
+          className="transition duration-75 hover:scale-125"
           url="mailto:wadadlijerk@gmail.com"
           fgColor="black"
           bgColor="transparent"
@@ -42,7 +42,7 @@ function Footer({}: Props) {
           bgColor="rgba(255, 255, 255, 0.440)" />*/}
           <a
           href="tel:13472405913">
-  < PhoneIcon className="h-6 w-6 mt-3 text-black" />
+  < PhoneIcon className="mt-3 h-6 w-6 text-black transition duration-75 hover:scale-125" />
           </a>
     </div>
    </>

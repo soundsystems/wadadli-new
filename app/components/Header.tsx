@@ -28,7 +28,7 @@ export default function Header({ }: Props) {
         className="flex flex-row"
       >
   <Link href="#hero">
-  <Image src='/logo.webp' alt="Wadadli Jerk Logo" width='200' height='200' className="h-20 w-20 hover:scale-110" />
+  <Image src='/logo.webp' alt="Wadadli Jerk Logo" width='200' height='200' className="h-20 w-20 hover:scale-125 transition duration-75" />
   </Link>
       </motion.div>
 
@@ -46,7 +46,7 @@ export default function Header({ }: Props) {
         transition={{
           duration: .4,
         }}
-        className="flex cursor-pointer hover:scale-110"
+        className="flex cursor-pointer hover:scale-110 transtion duration-75"
       >
         <OrderNowButton />
         <Dropdown/>
