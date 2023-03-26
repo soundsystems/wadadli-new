@@ -31,7 +31,7 @@
     "app/app/page.tsx",
     "app/app/contact/contact.tsx",
     ".next/types/**/*.ts"
-, "app/utils/array-ceil.jsx"  ],
+, "app/utils/array-ceil.jsx", "pages/api/newsletter.jsx", "app/components/Subscribe.tsx",   ],
   "exclude": [
     "node_modules"
   ]

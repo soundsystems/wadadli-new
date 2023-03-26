@@ -18,7 +18,7 @@ import Footer from "./components/Footer";
 //if (typeof window === "undefined") {LogRocket.init('vdixgc/wadadli');}
 
 //Lazy load the gallery section
-const Gallery = dynamic(() => import('./gallery/Gallery'));
+// const Gallery = dynamic(() => import('./gallery/page'));
 
 
 export default function HomePage() {

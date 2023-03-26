@@ -4,6 +4,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 import { useState } from "react";
 import { AnimatePresence, motion, MotionConfig } from "framer-motion";
 import useKeypress from "react-use-keypress";
+import Header from "../components/Header";
 
 type Props = {};
 
@@ -44,9 +45,11 @@ let margin = 11;
 
   return (
     <>
+    <Header/>
     <MotionConfig transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1] }}>
-      <div className="h-full pt-40">
-        <div className="mx-auto flex h-full max-w-7xl flex-col justify-center">
+      <div className="h-full pt-40
+      ">
+        <div className="mx-auto flex max-w-7xl flex-col justify-center">
           <div className="relative overflow-hidden">
             <motion.div animate={{ x: `-${index * 100}%` }} className="flex">
               {images.map((image, i) => (

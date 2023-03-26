@@ -31,14 +31,14 @@ return (             <div className="relative">
                               >
                                 <Menu.Item>
                                   {({ active }) => (
-                                    <a
+                                    <Link
                                       className={`${
                                         active ? "rounded-t-xl bg-zinc-900 text-orange-100 transition duration-300 ease-in-out" : ""
                                       } block whitespace-nowrap px-5 py-3`}
-                                      href="#"
+                                      href="/"
                                     >
                                     Menu
-                                    </a>
+                                    </Link>
                                   )}
                                 </Menu.Item>
                                 <Menu.Item>

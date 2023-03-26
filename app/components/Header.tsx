@@ -23,7 +23,7 @@ export default function Header({ }: Props) {
           scale: 1,
         }}
         transition={{
-          duration: 1.3,
+          duration: .4,
         }}
         className="flex flex-row"
       >
@@ -44,7 +44,7 @@ export default function Header({ }: Props) {
           scale: 1,
         }}
         transition={{
-          duration: 1.3,
+          duration: .4,
         }}
         className="flex cursor-pointer hover:scale-110"
       >

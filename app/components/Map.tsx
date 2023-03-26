@@ -12,7 +12,7 @@ function Map() {
     <>
 <Script src="../components/Map.tsx" type="text/partytown" />
 <div className='h-screen w-screen'> 
-<div className='z-10 h-full overflow-hidden'>
+<div className='z-20 h-full w-auto overflow-hidden'>
  <GoogleMap zoom={10} center={{lat:  40.6848651, lng: -73.9444802}} mapContainerClassName='mx-28 w-auto h-96 rounded-l'> 
  <Marker position={{lat:  40.6848651, lng: -73.9444802}} />
  </GoogleMap>
