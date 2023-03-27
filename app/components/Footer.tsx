@@ -41,8 +41,8 @@ function Footer({}: Props) {
           fgColor="black"
           bgColor="rgba(255, 255, 255, 0.440)" />*/}
           <a
-          href="tel:13472405913">
-  < PhoneIcon className="mt-3 h-6 w-6 text-black transition duration-75 hover:scale-125" />
+          href="tel:13472405913" className='h-[50px] w-[50px] text-center'>
+  < PhoneIcon className="h-[24px] w-[24px] m-auto mt-3 text-black transition duration-75 hover:scale-125" />
           </a>
     </div>
    </>

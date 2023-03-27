@@ -38,39 +38,45 @@ export default function Subscribe() {
   };
 
   return (
-    <div>
-      {state === "success" ? (
-        <p className="mt-4 text-xl font-medium text-green-800 text-center">
-          Thanks for joining the club. You will now be notified of upcoming events.
-        </p>
-      ) : (
-        <form onSubmit={subscribe} className="mb-9 mt-4 flex flex-col">
-          <button
-            type="submit"
-            className="group relative mx-auto mb-8 flex items-center justify-center divide-x divide-orange-500 rounded-xl bg-zinc-50/60 p-4 leading-none shadow-lg shadow-zinc-900/75 transition duration-500 hover:divide-orange-200 hover:bg-zinc-900/90 hover:shadow-md"
-          >
-            <span className="px-2 text-lg font-semibold uppercase text-orange-500 transition duration-500 group-hover:text-orange-100 md:inline-flex lg:text-lg">
-              Subscribe &rarr;
-              <input
-                className="bg-transparent px-4 text-center text-sm text-orange-500 placeholder:text-orange-500 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-orange-500"
-                id="EMAIL"
-                autoFocus
-                required
-                type="email"
-                value={email}
-                onChange={handleChange}
-                placeholder="Join the club"
-              />
-            </span>
-            <span className="pl-2">
-              <InboxArrowDownIcon className="h-8 w-8 text-orange-500 transition duration-500 group-hover:text-orange-100" />
-            </span>
-          </button>
-          {state === "error" && (
-            <p className="mt-3 text-center text-red-500">{errorMsg}</p>
-          )}
-        </form>
-      )}
-    </div>
+    <div className="my-6 mx-auto"> 
+    {state === "success" ? (
+      <p className="mt-4 text-center text-xl font-medium text-green-800">
+        Thanks for joining the club. You will now be notified of upcoming events.
+      </p> 
+    ) : (
+      <form onSubmit={subscribe}> 
+<button 
+  type="submit" 
+  className="group relative w-48 sm:w-56 md:w-96 mx-auto inline-flex items-center justify-center divide-x divide-orange-500 rounded-xl bg-zinc-50/60 py-1 px-40 sm:px-44 sm:py-2 leading-none shadow-lg shadow-zinc-900/75 transition duration-500 hover:divide-orange-200 hover:bg-zinc-900/90 hover:shadow-md overflow-hidden"  
+>         
+<span 
+    className="px-2 inline-flex text-xs sm:text-sm md:text-lg lg:text-xl font-semibold uppercase text-orange-500 transition duration-500 group-hover:text-orange-100" 
+  > 
+            Subscribe
+          </span> 
+          <span className="px-2 inline-flex"> 
+            <input 
+              className="bg-transparent p-1 text-center text-sm text-orange-500 placeholder:text-orange-500 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-orange-500" 
+                      id="EMAIL"
+                      autoFocus
+                      required
+                      type="email"
+                      value={email}
+                      onChange={handleChange}
+                      placeholder="Join the club"
+                    /> 
+                  </span> 
+          <span className="px-2 ml-auto inline-flex"> 
+            <InboxArrowDownIcon className="h-8 w-8 text-orange-500 transition duration-500 group-hover:text-orange-100" /> 
+          </span> 
+        </button> 
+        {state === "error" && (
+          <p className="mt-3 text-center text-red-500">{errorMsg}</p> 
+        )} 
+      </form> 
+    )} 
+  </div>  
   );
 }
+
+

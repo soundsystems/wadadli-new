@@ -10,7 +10,7 @@ type Props = {};
 
 export default function Header({ }: Props) {
   return (
-    <div className="sticky top-0 z-50 mx-auto flex max-w-7xl items-center justify-between p-6 text-center">
+    <div className="sticky top-0 z-50 gap-x-2 flex max-w-full items-center justify-between p-6 text-center">
       <motion.div
         initial={{
           x: -500,
@@ -27,8 +27,8 @@ export default function Header({ }: Props) {
         }}
         className="flex flex-row"
       >
-  <Link href="#hero">
-  <Image src='/logo.webp' alt="Wadadli Jerk Logo" width='200' height='200' className="h-20 w-20 hover:scale-125 transition duration-75" />
+  <Link href="#menu">
+  <Image src='/logo.webp' alt="Wadadli Jerk Logo" width='200' height='200' priority className="h-20 w-20 hover:scale-125 mx-2 transition duration-75" />
   </Link>
       </motion.div>
 
