@@ -28,6 +28,7 @@ importers:
       tailwind-scrollbar: ^2.1.0
       tailwindcss: ^3.2.7
       typescript: 4.9.5
+      use-mailchimp-form: ^3.1.0
     dependencies:
       '@headlessui/react': 1.7.13_biqbaboplfbrettd7655fr4n2y
       '@heroicons/react': 2.0.16_react@18.2.0
@@ -40,6 +41,7 @@ importers:
       react-hook-form: 7.43.8_react@18.2.0
       react-social-icons: 5.15.0_react@18.2.0
       react-use-keypress: 1.3.1_react@18.2.0
+      use-mailchimp-form: 3.1.0_react@18.2.0
     devDependencies:
       '@svgr/webpack': 6.5.1
       '@tailwindcss/aspect-ratio': 0.4.2_tailwindcss@3.2.7
@@ -2344,6 +2346,11 @@ packages:
       ms: 2.1.2
     dev: true
 
+  /decode-uri-component/0.2.2:
+    resolution: {integrity: sha512-FqUYQ+8o158GyGTrMFJms9qh3CqTKvAqgqsTnkLI8sKu0028orqBhxNMFkFen0zGyg6epACD32pjVk58ngIErQ==}
+    engines: {node: '>=0.10'}
+    dev: false
+
   /deep-equal/2.2.0:
     resolution: {integrity: sha512-RdpzE0Hv4lhowpIUKKMJfeH6C1pXdtT1/it80ubgWqwI3qpuxUBpC1S4hnHg+zjnuOoDkzUtUCEEkG+XG5l3Mw==}
     dependencies:
@@ -2901,6 +2908,10 @@ packages:
     dependencies:
       reusify: 1.0.4
 
+  /fetch-jsonp/1.2.3:
+    resolution: {integrity: sha512-C13k1o7R9JTN1wmhKkrW5bU/00LwixXnkufQUR6Rbf4KCS0i8mycQaovt4WVbHnA2NKgi7Ryp9Whpy/CGcij6Q==}
+    dev: false
+
   /file-entry-cache/6.0.1:
     resolution: {integrity: sha512-7Gps/XWymbLk2QLYK4NzpMOrYjMhdIxXuIvy2QBsLE6ljuodKvdkWs/cpyJJ3CVIVpH0Oi1Hvg1ovbMzLdFBBg==}
     engines: {node: ^10.12.0 || >=12.0.0}
@@ -2913,6 +2924,11 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       to-regex-range: 5.0.1
+
+  /filter-obj/1.1.0:
+    resolution: {integrity: sha512-8rXg1ZnX7xzy2NGDVkBVaAy+lSlPNwad13BtgSlLuxfIslyt5Vg64U7tFcCt4WS1R0hvtnQybT/IyCkGZ3DpXQ==}
+    engines: {node: '>=0.10.0'}
+    dev: false
 
   /find-up/5.0.0:
     resolution: {integrity: sha512-78/PXT1wlLLDgTzDs7sjq9hzz0vXD+zn+7wypEe4fXQxCmdmqfGsEPQxmiCSQI3ajFV91bVSsvNtrJRiW6nGng==}
@@ -3852,6 +3868,16 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
+  /query-string/7.1.3:
+    resolution: {integrity: sha512-hh2WYhq4fi8+b+/2Kg9CEge4fDPvHS534aOOvOZeQ3+Vf2mCFsaFBYj0i+iXcAq6I9Vzp5fjMFBlONvayDC1qg==}
+    engines: {node: '>=6'}
+    dependencies:
+      decode-uri-component: 0.2.2
+      filter-obj: 1.1.0
+      split-on-first: 1.1.0
+      strict-uri-encode: 2.0.0
+    dev: false
+
   /queue-microtask/1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
 
@@ -4075,6 +4101,11 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
+  /split-on-first/1.1.0:
+    resolution: {integrity: sha512-43ZssAJaMusuKWL8sKUBQXHWOpq8d6CfN/u1p4gUzfJkM05C8rxTmYrkIPTXapZpORA6LkkzcUulJ8FqA7Uudw==}
+    engines: {node: '>=6'}
+    dev: false
+
   /stable/0.1.8:
     resolution: {integrity: sha512-ji9qxRnOVfcuLDySj9qzhGSEFVobyt1kIOSkj1qZzYLzq7Tos/oUUWvotUPQLlrsidqsK6tBH89Bc9kL5zHA6w==}
     deprecated: 'Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility'
@@ -4086,6 +4117,11 @@ packages:
     dependencies:
       internal-slot: 1.0.5
     dev: true
+
+  /strict-uri-encode/2.0.0:
+    resolution: {integrity: sha512-QwiXZgpRcKkhTj2Scnn++4PKtWsH0kpzZ62L2R6c/LUVYv7hVnZqcg2+sMuT6R7Jusu1vviK/MFsu6kNJfWlEQ==}
+    engines: {node: '>=4'}
+    dev: false
 
   /string.prototype.matchall/4.0.8:
     resolution: {integrity: sha512-6zOCOcJ+RJAQshcTvXPHoxoQGONa3e/Lqx90wUA+wEzX78sg5Bo+1tQo4N0pohS0erG9qtCqJDjNCQBjeWVxyg==}
@@ -4382,6 +4418,16 @@ packages:
     dependencies:
       punycode: 2.3.0
     dev: true
+
+  /use-mailchimp-form/3.1.0_react@18.2.0:
+    resolution: {integrity: sha512-kv1A5P5068zA3g2ShBiom0yXUlbeOiE4JzrljszVV3kx8biHToPUuWnSGeRdz6HsN60nWYud+wWpP2xn+xWoCw==}
+    peerDependencies:
+      react: '>= 16.8.0'
+    dependencies:
+      fetch-jsonp: 1.2.3
+      query-string: 7.1.3
+      react: 18.2.0
+    dev: false
 
   /util-deprecate/1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
