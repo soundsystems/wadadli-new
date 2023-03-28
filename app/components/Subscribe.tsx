@@ -2,7 +2,8 @@
 
 import { InboxArrowDownIcon } from "@heroicons/react/24/outline";
 import { useFormFields, useMailChimpForm } from "use-mailchimp-form";
-import "@lottiefiles/lottie-player";
+import Lottie from "lottie-react";
+import loadingSpinner from "../animations/loading-spinner.json";
 
 export default function Subscribe() {
   const url = process.env.NEXT_PUBLIC_MAILCHIMP_URL as string;
@@ -33,7 +34,7 @@ export default function Subscribe() {
   > 
             {loading ? (
               <>
-                <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_jsuj2bs7.json"  background="transparent"  speed="1"  style={{width: "24px", height: "24px"}}  loop  autoplay></lottie-player> 
+                <Lottie animationData={loadingSpinner} style={{width: "24px", height: "24px"}}  loop  autoplay></Lottie>
                 <span>submitting</span> 
               </>
             ) : "Subscribe" }

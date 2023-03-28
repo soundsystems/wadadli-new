@@ -12,10 +12,10 @@
   "dependencies": {
     "@headlessui/react": "^1.7.13",
     "@heroicons/react": "^2.0.16",
-    "@lottiefiles/lottie-player": "^1.7.1",
     "@react-google-maps/api": "^2.18.1",
     "eslint-plugin-tailwindcss": "^3.10.1",
     "framer-motion": "^10.9.1",
+    "lottie-react": "^2.4.0",
     "next": "^13.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
