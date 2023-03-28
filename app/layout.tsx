@@ -1,6 +1,17 @@
-import Footer from "./components/Footer";
 import '../styles/globals.css'
-import { Metadata } from "next";
+
+
+export const metadata = {
+  title: 'Welcome to Wadadli',
+  description: 'Wadadli Jerk is a family owned and operated business that specializes in authentic Jamaican Jerk cuisine. We are located in the heart of the Brooklyn, New York.',
+  icons: {
+    icon: "/_next/static/media/metadata/apple-touch-icon.png",
+    // icon: "/_next/static/media/metadata/favicon-32x32.png",
+    // icon: "/_next/static/media/metadata/favicon-16x16.png",
+  },
+// manifest: "/site.webmanifest",
+}
+;
 
 export default function RootLayout({
     // Layouts must accept a children prop.
