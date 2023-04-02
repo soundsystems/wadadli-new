@@ -1,9 +1,7 @@
-'use client'
-
 import { InboxArrowDownIcon } from "@heroicons/react/24/outline";
 import { useFormFields, useMailChimpForm } from "use-mailchimp-form";
 import Lottie from "lottie-react";
-import loadingSpinner from "../animations/loading-spinner.json";
+// import loadingSpinner from "/animations/loading-spinner.json";
 
 export default function Subscribe() {
   const url = process.env.NEXT_PUBLIC_MAILCHIMP_URL as string;
@@ -27,14 +25,14 @@ export default function Subscribe() {
         > 
 <button 
   type="submit" 
-  className="group relative mx-auto inline-flex w-48 items-center justify-center divide-x divide-orange-500 overflow-hidden rounded-xl bg-zinc-50/60 py-1 px-40 leading-none shadow-lg shadow-zinc-900/75 transition duration-500 hover:divide-orange-200 hover:bg-zinc-900/90 hover:shadow-md sm:w-56 sm:px-44 sm:py-2 md:w-96"  
+  className="group relative mx-auto inline-flex w-48 items-center justify-center divide-x divide-orange-500 overflow-hidden rounded-xl bg-zinc-50/60 py-1 px-44 leading-none shadow-lg shadow-zinc-900/75 transition duration-500 hover:divide-orange-200 hover:bg-zinc-900/90 hover:shadow-md sm:w-56 sm:px-44 sm:py-2 md:w-96"  
 >         
 <span 
     className="inline-flex px-2 text-xs font-semibold uppercase text-orange-500 transition duration-500 group-hover:text-orange-100 sm:text-sm md:text-lg lg:text-xl" 
   > 
             {loading ? (
               <>
-                <Lottie animationData={loadingSpinner} style={{width: "24px", height: "24px"}}  loop  autoplay></Lottie>
+                {/* <Lottie animationData={loadingSpinner} style={{width: "24px", height: "24px"}}  loop  autoplay></Lottie> */}
                 <span>submitting</span> 
               </>
             ) : "Subscribe" }
