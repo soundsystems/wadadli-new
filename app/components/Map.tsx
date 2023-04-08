@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
-import { Partytown } from '@builder.io/partytown/react';
+// import { Partytown } from '@builder.io/partytown/react';
 
 function Map() {
   const { isLoaded } = useLoadScript({

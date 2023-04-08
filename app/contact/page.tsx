@@ -14,12 +14,13 @@ const Contact: NextPage = () => {
       <div className="container mx-auto px-4">
         <div className="@container md:@container/lg">
           <div className="my-8 flex flex-col items-center md:flex-row md:space-x-8">
-            <div className="w-full md:w-2/3">
+            <div className="w-full grow md:w-2/3">
               <Map />
             </div>
             <div className="w-full md:w-1/3">
-              <div className="flex flex-col items-center md:items-start">
-                <div className="font-semibold">Full Address:</div>
+              <div className="inline-block rounded-lg bg-zinc-50/60 p-4 text-left">
+                <div className="flex flex-col items-start">
+                <div className="font-semibold">Address:</div>
                 <address>
                   419 Putnam Ave<br />
                   Brooklyn, NY 11216<br />
@@ -34,12 +35,11 @@ const Contact: NextPage = () => {
                   <div className="font-semibold">Email:</div>
                   <a href="mailto:wadadlijerk@gmail.com">wadadlijerk@gmail.com</a>
                 </div>
+                </div>
               </div>
             </div>
           </div>
-          <div className="w-full">
             <ContactForm />
-          </div>
         </div>
       </div>
       <Footer />
