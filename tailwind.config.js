@@ -14,16 +14,17 @@ module.exports = {
         transform: 'rotate(0deg)',
         },
         "25%": {
-        transform: 'rotate(1deg)',
+        transform: 'rotate(2deg)',
         },
         "75%" : {
-        transform: 'rotate(-1deg)',
+        transform: 'rotate(-2deg)',
         },
         },
       },
   plugins: [
     require('tailwind-scrollbar'),
     require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/container-queries'),
   ],
     }
   }

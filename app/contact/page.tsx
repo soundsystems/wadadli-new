@@ -1,32 +1,50 @@
 'use client'
 
-import type { NextPage } from "next";
-import React from "react";
-import ContactForm from "../components/ContactForm";
-import Header from "../components/Header";
-import Map from "../components/Map";
+import type { NextPage } from 'next';
+import React from 'react';
+import ContactForm from '../components/ContactForm';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
+import Map from '../components/Map';
 
 const Contact: NextPage = () => {
-
-    return (
-      <>
-      <Header/>
-              <h1 className="text-center text-4xl font-bold text-orange-500">Contact Us</h1>  
-      <div className="grid h-full grid-cols-2 flex-col items-center justify-center p-16 py-2">
-      <div><Map/></div>
-      <ContactForm/>
-
-        {/* <form className="flex" onSubmit={handleSubmit((data) => console.log(data))}>
-        <input {...register("firstName", { required: true })} />
-        {errors.firstName && <span>This field is required</span>}
-        <input {...register("lastName", { required: true })} />
-        {errors.lastName && <span>This field is required</span>}
-        <input type="submit" />
-        </form> */}
-
+  return (
+    <>
+      <Header />
+      <div className="container mx-auto px-4">
+        <div className="@container md:@container/lg">
+          <div className="my-8 flex flex-col items-center md:flex-row md:space-x-8">
+            <div className="w-full md:w-2/3">
+              <Map />
+            </div>
+            <div className="w-full md:w-1/3">
+              <div className="flex flex-col items-center md:items-start">
+                <div className="font-semibold">Full Address:</div>
+                <address>
+                  419 Putnam Ave<br />
+                  Brooklyn, NY 11216<br />
+                  Tompkins Ave & Marcy Ave<br />
+                  Bedford Stuyvesant
+                </address>
+                <div>
+                  <div className="font-semibold">Phone Number:</div>
+                  <a href="tel:(917) 687-1508">(917) 687-1508</a>
+                </div>
+                <div>
+                  <div className="font-semibold">Email:</div>
+                  <a href="mailto:wadadlijerk@gmail.com">wadadlijerk@gmail.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="w-full">
+            <ContactForm />
+          </div>
         </div>
-        </>
-    )   
-}
+      </div>
+      <Footer />
+    </>
+  );
+};
 
-export default Contact
+export default Contact;

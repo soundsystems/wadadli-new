@@ -10,13 +10,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@builder.io/partytown": "^0.7.6",
     "@headlessui/react": "^1.7.13",
     "@heroicons/react": "^2.0.17",
     "@react-google-maps/api": "^2.18.1",
-    "eslint-plugin-tailwindcss": "^3.10.3",
-    "framer-motion": "^10.10.0",
+    "@tailwindcss/container-queries": "^0.1.1",
+    "eslint-plugin-tailwindcss": "^3.11.0",
+    "framer-motion": "^10.11.2",
     "lottie-react": "^2.4.0",
-    "next": "^13.2.4",
+    "next": "^13.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.9",
@@ -25,7 +27,6 @@
     "use-mailchimp-form": "^3.1.0"
   },
   "devDependencies": {
-    "@svgr/webpack": "^6.5.1",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@types/node": "18.15.0",
     "@types/react": "18.0.28",
