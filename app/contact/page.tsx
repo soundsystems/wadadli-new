@@ -8,8 +8,12 @@ import Header from '../components/Header';
 import Map from '../components/Map';
 
 function isMobileDevice() {
+  if (typeof navigator === 'undefined') {
+    return false;
+  }
   return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
+
 const mapsLink = isMobileDevice()
   ? 'geo:40.68452871196172,-73.94436153324439'
   : 'https://www.google.com/maps?q=419+Putnam+Ave+Brooklyn,+NY+11216';
