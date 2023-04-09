@@ -24,10 +24,9 @@ function isIOSDevice() {
 
 const mapsLink = isMobileDevice()
   ? isIOSDevice()
-    ? 'maps://maps.apple.com/?daddr=40.68452871196172,-73.94436153324439'
-    : 'https://maps.google.com/maps?daddr=40.68452871196172,-73.94436153324439'
-  : 'https://www.google.com/maps/place/Wadadli+Jerk/@40.6848716,-73.9470323,17z/data=!3m1!4b1!4m6!3m5!1s0x89c25bf027b56619:0xd79555c3b11d9932!8m2!3d40.6848676!4d-73.9444574!16s%2Fg%2F11tfn_q95s';
-
+  ? 'maps://maps.apple.com/?q=Wadadli+Jerk&daddr=40.684751,-73.944182'
+  : 'https://maps.google.com/maps?daddr=40.684751,-73.944182'
+    : 'https://www.google.com/maps?q=374+Tompkins+Ave+Brooklyn,+NY+11216';
 
 const Contact: NextPage = () => {
   return (
@@ -46,7 +45,7 @@ const Contact: NextPage = () => {
                 <div className="font-semibold">Location:</div>
                 <address className="mb-2">
                 <a href={mapsLink}>
-                  419 Putnam Ave<br />
+                  374 Tompkins Ave<br />
                   Brooklyn, NY 11216<br />
                   Tompkins Ave & Marcy Ave<br />
                   Bedford Stuyvesant
