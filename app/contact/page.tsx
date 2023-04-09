@@ -7,6 +7,14 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Map from '../components/Map';
 
+function isMobileDevice() {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+const mapsLink = isMobileDevice()
+  ? 'geo:40.68452871196172,-73.94436153324439'
+  : 'https://www.google.com/maps?q=419+Putnam+Ave+Brooklyn,+NY+11216';
+
+
 const Contact: NextPage = () => {
   return (
     <>
@@ -21,12 +29,14 @@ const Contact: NextPage = () => {
               <div className="inline-block rounded-lg border bg-zinc-50/60 p-4 text-left">
                 <div className='bg-white p-4 rounded-lg'>
                 <div className="flex flex-col items-start">
-                <div className="font-semibold">Address:</div>
-                <address className='mb-2'>
+                <div className="font-semibold">Location:</div>
+                <address className="mb-2">
+                <a href={mapsLink}>
                   419 Putnam Ave<br />
                   Brooklyn, NY 11216<br />
                   Tompkins Ave & Marcy Ave<br />
                   Bedford Stuyvesant
+                </a>
                 </address>
                 <div>
                   <div className="font-semibold">Phone Number:</div>
