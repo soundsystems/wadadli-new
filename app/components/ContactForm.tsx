@@ -13,10 +13,12 @@ interface FormData {
 const ContactForm = () => {
   const { register, handleSubmit, formState } = useForm<FormData>();
   const [isOpen, setIsOpen] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
   const onSubmit = (data: FormData) => {
     console.log(data);
     setIsOpen(true);
+    setFormSubmitted(true);
   };
 
   const closeModal = () => {
@@ -29,8 +31,14 @@ const ContactForm = () => {
   };
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-      <form onSubmit={handleSubmit(onSubmit)} className="mx-auto w-full max-w-md rounded-lg bg-zinc-50/60 p-4 shadow-md">
+<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+  {formSubmitted ? (
+    <div className="mx-auto w-full max-w-md rounded-lg bg-zinc-50/60 p-4 shadow-md">
+      <h2 className="mb-4 text-2xl font-bold">Thank you for your submission!</h2>
+      <p>Your message has been sent. We will get back to you shortly.</p>
+    </div>
+  ) : (
+    <form onSubmit={handleSubmit(onSubmit)} className="mx-auto w-full max-w-md rounded-lg bg-zinc-50/60 p-4 shadow-md">
         <h2 className="mb-4 text-2xl font-bold">Contact Us</h2>
         <div className="mb-4 flex flex-wrap">
 <div className="mb-4 w-full pr-2 md:mb-0 md:w-1/2">
@@ -45,7 +53,7 @@ const ContactForm = () => {
     onBlur={() => {}}
     type="text"
     id="firstName"
-    className="w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow outline-orange-500 focus:shadow-orange-500 focus:outline-none"
+    className="w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 outline shadow outline-orange-500 focus:shadow-orange-500 focus:outline-none"
     placeholder="First Name"
   />
   {formState.errors.firstName && <span className="text-xs text-red-500">This field is required</span>}
@@ -62,7 +70,7 @@ const ContactForm = () => {
     onBlur={() => {}}
     type="text"
     id="lastName"
-    className="w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow outline-orange-500 focus:shadow-orange-500 focus:outline-none"
+    className="w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow outline outline-orange-500 focus:shadow-orange-500 focus:outline-none"
     placeholder="Last Name"
   />
   {formState.errors.lastName && <span className="text-xs text-red-500">This field is required</span>}
@@ -80,7 +88,7 @@ const ContactForm = () => {
   onBlur={() => {}}
   type="email"
   id="email"
-  className="w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow outline-orange-500 focus:shadow-orange-500 focus:outline-none"
+  className="w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow outline outline-orange-500 focus:shadow-orange-500 focus:outline-none"
   placeholder="Email"
 />
 {formState.errors.email && <span className="text-xs text-red-500">Please enter a valid email address</span>}
@@ -96,20 +104,21 @@ const ContactForm = () => {
   whileFocus="focused"
   onBlur={() => {}}
   id="message"
-  className="w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow outline-orange-500 focus:shadow-orange-500 focus:outline-none"
+  className="w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow outline outline-orange-500 focus:shadow-orange-500 focus:outline-none"
   placeholder="Message"
   rows={4}
 ></motion.textarea>
 {formState.errors.message && <span className="text-xs text-red-500">Please enter a message</span>}
 </div>
-        <button type="submit" className="w-full rounded bg-orange-500 px-4 py-2 font-bold text-white focus:shadow-orange-500 focus:outline-none">
+        <button type="submit" className="w-full rounded bg-orange-500 px-4 py-2 font-bold text-white outline focus:shadow-orange-500 focus:outline-none">
           Send Message
         </button>
-      </form>
+        </form>
+  )}
 
       <Dialog open={isOpen} onClose={closeModal} className="fixed inset-0 z-10 overflow-y-auto">
         <div className="min-h-screen px-4 text-center">
-          <Dialog.Overlay className="fixed inset-0 bg-black opacity-30" />
+          {/* <Dialog.Overlay className="fixed inset-0 bg-black opacity-30" /> */}
           <span className="inline-block h-screen align-middle" aria-hidden="true">
             &#8203;
           </span>

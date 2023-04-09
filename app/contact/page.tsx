@@ -18,7 +18,7 @@ const Contact: NextPage = () => {
               <Map />
             </div>
             <div className="w-full md:w-1/3">
-              <div className="inline-block rounded-lg border bg-zinc-50/60 p-4 text-left shadow outline-orange-500 focus:shadow-orange-500 focus:outline-none">
+              <div className="inline-block rounded-lg border bg-zinc-50/60 p-4 text-left">
                 <div className='bg-white p-4 rounded-lg'>
                 <div className="flex flex-col items-start">
                 <div className="font-semibold">Address:</div>
