@@ -17,7 +17,7 @@ export default function Subscribe() {
     EMAIL: "",
   });
   return (
-  <div className="my-6 mx-auto"> 
+  <div className="mx-auto my-6"> 
     <form onSubmit={event => {
         event.preventDefault();
         handleSubmit(fields);
@@ -25,7 +25,7 @@ export default function Subscribe() {
         > 
 <button 
   type="submit" 
-  className="group relative mx-auto inline-flex w-48 items-center justify-center divide-x divide-orange-500 overflow-hidden rounded-xl bg-zinc-50/60 py-1 px-44 leading-none shadow-lg shadow-zinc-900/75 transition duration-500 hover:divide-orange-200 hover:bg-zinc-900/90 hover:shadow-md sm:w-56 sm:px-44 sm:py-2 md:w-96"  
+  className="group relative mx-auto inline-flex w-48 items-center justify-center divide-x divide-orange-500 overflow-hidden rounded-xl bg-zinc-50/60 px-44 py-1 leading-none shadow-lg shadow-zinc-900/75 transition duration-500 hover:divide-orange-200 hover:bg-zinc-900/90 hover:shadow-md sm:w-56 sm:px-44 sm:py-2 md:w-96"  
 >         
 <span 
     className="inline-flex px-2 text-xs font-semibold uppercase text-orange-500 transition duration-500 group-hover:text-orange-100 sm:text-sm md:text-lg lg:text-xl" 
@@ -40,19 +40,19 @@ export default function Subscribe() {
           <span className="inline-flex px-2"> 
             {loading ? null : (
               <input 
-                className="bg-transparent p-1 text-center text-sm text-orange-500 placeholder:text-orange-500 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-orange-500" 
+                className="bg-transparent p-1 text-center text-sm font-bold text-orange-500 placeholder:text-orange-500 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-orange-500" 
                         id="EMAIL"
                         autoFocus
                         required
                         type="email"
                         value={fields.EMAIL}
                         onChange={handleFieldChange}
-                        placeholder="Join the club"
+                        placeholder="Join the family"
                       /> 
             )} 
                   </span> 
           <span className="ml-auto inline-flex px-2"> 
-            <InboxArrowDownIcon className="h-8 w-8 text-orange-500 transition duration-500 group-hover:text-orange-100" /> 
+            <InboxArrowDownIcon className="h-8 w-8 text-orange-500 stroke-2 transition duration-500 group-hover:text-orange-100" /> 
           </span> 
         </button> 
         <div className="mt-2 text-center font-medium text-zinc-900">

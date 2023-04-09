@@ -39,8 +39,8 @@ const Contact: NextPage = () => {
               <Map />
             </div>
             <div className="w-full md:w-1/3">
-              <div className="inline-block rounded-lg border bg-zinc-50/60 p-4 text-left">
-                <div className='rounded-lg bg-white p-4'>
+              <div className="inline-block rounded-xl border bg-zinc-50/60 p-2 text-left">
+                <div className='rounded-xl bg-white p-4'>
                 <div className="flex flex-col items-start">
                 <div className="font-medium">Location:</div>
                 <address className="mb-2">

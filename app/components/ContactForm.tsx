@@ -33,16 +33,16 @@ const ContactForm = () => {
   return (
 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
   {formSubmitted ? (
-    <div className="mx-auto w-full max-w-md rounded-lg bg-zinc-50/60 p-4 shadow-md">
+    <div className="mx-auto w-full max-w-md rounded-xl bg-zinc-50/60 p-6 shadow-md">
       <h2 className="mb-4 text-2xl font-bold">Thank you for your submission!</h2>
       <p>Your message has been sent. We will get back to you shortly.</p>
     </div>
   ) : (
     <form onSubmit={handleSubmit(onSubmit)} className="mx-auto w-full max-w-md rounded-lg bg-zinc-50/60 p-4 shadow-md">
-        <h2 className="mb-4 text-2xl font-bold">Contact Us</h2>
+        <h2 className="mb-4 text-2xl font-extrabold text-center text-zinc-900">Contact Us</h2>
         <div className="mb-4 flex flex-wrap">
 <div className="mb-4 w-full pr-2 md:mb-0 md:w-1/2">
-  <label htmlFor="firstName" className="mb-2 block text-sm font-bold">
+  <label htmlFor="firstName" className="mb-2 block text-sm text-left font-semibold text-zinc-900">
     First Name
   </label>
   <motion.input
@@ -53,13 +53,13 @@ const ContactForm = () => {
     onBlur={() => {}}
     type="text"
     id="firstName"
-    className="w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 outline shadow outline-orange-500 focus:shadow-orange-500 focus:outline-none"
+    className="w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow outline outline-orange-500 focus:shadow-orange-500 focus:outline-none"
     placeholder="First Name"
   />
   {formState.errors.firstName && <span className="text-xs text-red-500">This field is required</span>}
 </div>
 <div className="w-full md:w-1/2">
-  <label htmlFor="lastName" className="mb-2 block text-sm font-bold">
+  <label htmlFor="lastName" className="mb-2 block text-sm font-semibold text-left md:text-right text-zinc-900">
     Last Name
   </label>
   <motion.input
@@ -77,7 +77,7 @@ const ContactForm = () => {
 </div>
 </div>
 <div className="mb-4">
-<label htmlFor="email" className="mb-2 block text-sm font-bold">
+<label htmlFor="email" className="mb-2 block text-sm font-semibold text-zinc-900">
   Email
 </label>
 <motion.input
@@ -94,7 +94,7 @@ const ContactForm = () => {
 {formState.errors.email && <span className="text-xs text-red-500">Please enter a valid email address</span>}
 </div>
 <div className="mb-4">
-<label htmlFor="message" className="mb-2 block text-sm font-bold">
+<label htmlFor="message" className="mb-2 block text-sm font-semibold">
   Message
 </label>
 <motion.textarea
@@ -110,7 +110,7 @@ const ContactForm = () => {
 ></motion.textarea>
 {formState.errors.message && <span className="text-xs text-red-500">Please enter a message</span>}
 </div>
-        <button type="submit" className="w-full rounded bg-orange-500 px-4 py-2 font-bold text-white outline focus:shadow-orange-500 focus:outline-none">
+        <button type="submit" className="w-full rounded-xl bg-orange-500 px-4 py-2 font-semibold text-white shadow-lg shadow-zinc-900/75 outline transition duration-500 hover:divide-orange-200 hover:bg-zinc-900/90 hover:shadow-md focus:shadow-orange-500 focus:outline-none">
           Send Message
         </button>
         </form>
