@@ -40,11 +40,11 @@ const Contact: NextPage = () => {
             </div>
             <div className="w-full md:w-1/3">
               <div className="inline-block rounded-lg border bg-zinc-50/60 p-4 text-left">
-                <div className='bg-white p-4 rounded-lg'>
+                <div className='rounded-lg bg-white p-4'>
                 <div className="flex flex-col items-start">
-                <div className="font-semibold">Location:</div>
+                <div className="font-medium">Location:</div>
                 <address className="mb-2">
-                <a href={mapsLink}>
+                <a className='text-sm font-bold text-orange-500' href={mapsLink}>
                   374 Tompkins Ave<br />
                   Brooklyn, NY 11216<br />
                   Tompkins Ave & Marcy Ave<br />
@@ -52,12 +52,12 @@ const Contact: NextPage = () => {
                 </a>
                 </address>
                 <div>
-                  <div className="font-semibold">Phone Number:</div>
-                  <a href="tel:(917) 687-1508">(917) 687-1508</a>
+                  <div className="font-medium">Phone Number:</div>
+                  <a className='text-sm font-bold text-orange-500' href="tel:(917) 687-1508">(917) 687-1508</a>
                 </div>
                 <div className='mt-2'>
-                  <div className="font-semibold">Email:</div>
-                  <a href="mailto:wadadlijerk@gmail.com">wadadlijerk@gmail.com</a>
+                  <div className="font-medium">Email:</div>
+                  <a className='text-sm font-bold text-orange-500' href="mailto:wadadlijerk@gmail.com">wadadlijerk@gmail.com</a>
                 </div>
                 </div>
                 </div>
