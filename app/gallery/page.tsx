@@ -5,24 +5,26 @@ import { useState } from "react";
 import { AnimatePresence, motion, MotionConfig } from "framer-motion";
 import useKeypress from "react-use-keypress";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 type Props = {};
 
 export default function Gallery({ }: Props) {
-let images = [
-  "/images/1.webp",
-  "/images/2.webp",
-  "/images/3.webp",
-  "/images/4.webp",
-  "/images/5.webp",
-  "/images/6.webp",
-  "/images/1.webp?",
-  "/images/2.webp?",
-  "/images/3.webp?",
-  "/images/4.webp?",
-  "/images/5.webp?",
-  "/images/6.webp?",
-];
+  let images = [
+    { src: "/images/1.webp", key: "img1" },
+    { src: "/images/2.webp", key: "img2" },
+    { src: "/images/3.webp", key: "img3" },
+    { src: "/images/4.webp", key: "img4" },
+    { src: "/images/5.webp", key: "img5" },
+    { src: "/images/6.webp", key: "img6" },
+    { src: "/images/1.webp", key: "img7" },
+    { src: "/images/2.webp", key: "img8" },
+    { src: "/images/3.webp", key: "img9" },
+    { src: "/images/4.webp", key: "img10" },
+    { src: "/images/5.webp", key: "img11" },
+    { src: "/images/6.webp", key: "img12" },
+  ];
+  
 
 let collapsedAspectRatio = 1 / 3;
 let fullAspectRatio = 3 / 2;
@@ -51,15 +53,15 @@ let margin = 11;
       ">
         <div className="mx-auto flex max-w-7xl flex-col justify-center">
           <div className="relative overflow-hidden">
-            <motion.div animate={{ x: `-${index * 100}%` }} className="flex">
-              {images.map((image, i) => (
-                <motion.img
-                  key={image}
-                  src={image}
-                  animate={{ opacity: i === index ? 1 : 0.3 }}
-                  className="aspect-[3/2] object-cover"
-                />
-              ))}
+            <motion.div animate={{ x: `-${index * 100}%` }} className="flex w-full">
+            {images.map((imageObj, i) => (
+  <motion.img
+    key={imageObj.key}
+    src={imageObj.src}
+    animate={{ opacity: i === index ? 1 : 0.3 }}
+    className="aspect-[3/2] w-full object-cover"
+  />
+))}
             </motion.div>
             <AnimatePresence initial={false}>
               {index > 0 && (
@@ -92,7 +94,7 @@ let margin = 11;
             </AnimatePresence>
           </div>
           
-          <div className="relative inset-x-0 flex justify-center overflow-hidden">
+          <div className="relative my-4 inset-x-0 flex justify-center overflow-hidden">
             <motion.div
               animate={{
                 x: `-${
@@ -102,11 +104,11 @@ let margin = 11;
                 }%`,
               }}
               style={{ aspectRatio: fullAspectRatio, gap: `${gap}%` }}
-              className="flex h-20"
+              className="flex h-20 "
             >
-              {images.map((image, i) => (
+             {images.map((imageObj, i) => (
                 <motion.button
-                  key={image}
+                  key={imageObj.key}
                   onClick={() => setIndex(i)}
                   whileHover={{ opacity: 1 }}
                   initial={false}
@@ -126,15 +128,16 @@ let margin = 11;
                     },
                   }}
                 >
-                  <motion.img src={image} className="h-full object-cover" />
-                </motion.button>
-              ))}
+                   <motion.img src={imageObj.src} className="h-full rounded-lg object-cover" />
+                  </motion.button>
+                ))}
             </motion.div>
           </div>
 
         </div>
       </div>
     </MotionConfig>
+    <Footer/>
     </>
   );
 }
