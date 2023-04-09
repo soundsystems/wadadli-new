@@ -53,16 +53,32 @@ let margin = 11;
       ">
         <div className="mx-auto flex max-w-7xl flex-col justify-center">
           <div className="relative overflow-hidden">
-            <motion.div animate={{ x: `-${index * 100}%` }} className="flex w-full">
-            {images.map((imageObj, i) => (
-  <motion.img
-    key={imageObj.key}
-    src={imageObj.src}
-    animate={{ opacity: i === index ? 1 : 0.3 }}
-    className="aspect-[3/2] w-full object-cover"
-  />
-))}
+          <motion.div
+              animate={{ x: `-${index * 100}%` }}
+              className="flex w-full"
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={1}
+              dragMomentum={false}
+              onDragEnd={(_, info) => {
+                const direction = info.offset.x < 0 ? 1 : -1;
+                const newIndex = index + direction;
+
+                if (newIndex >= 0 && newIndex < images.length) {
+                  setIndex(newIndex);
+                }
+              }}
+            >
+              {images.map((imageObj, i) => (
+                <motion.img
+                  key={imageObj.key}
+                  src={imageObj.src}
+                  animate={{ opacity: i === index ? 1 : 0.3 }}
+                  className="aspect-[3/2] w-full object-cover"
+                />
+              ))}
             </motion.div>
+
             <AnimatePresence initial={false}>
               {index > 0 && (
                 <motion.button
