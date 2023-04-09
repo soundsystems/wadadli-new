@@ -25,7 +25,7 @@ export default function Subscribe() {
         > 
 <button 
   type="submit" 
-  className="group relative mx-auto inline-flex w-48 items-center justify-center divide-x divide-orange-500 overflow-hidden rounded-xl bg-zinc-50/60 px-48 py-2 leading-none shadow-lg shadow-zinc-900/75 transition duration-500 hover:divide-orange-200 hover:bg-zinc-900/90 hover:shadow-md sm:w-56 sm:px-44 sm:py-2 md:w-96"  
+  className="group relative inline-flex w-48 items-center justify-center divide-x divide-orange-500 overflow-hidden rounded-xl bg-zinc-50/60 px-48 py-2 leading-none shadow-lg shadow-zinc-900/75 transition duration-500 hover:divide-orange-200 hover:bg-zinc-900/90 hover:shadow-md sm:w-56 sm:px-44 sm:py-2 md:w-96"  
 >         
 <span 
     className="inline-flex px-2 font-semibold uppercase text-orange-500 transition duration-500 group-hover:text-orange-100 sm:text-sm md:text-lg lg:text-xl" 
