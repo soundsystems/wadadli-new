@@ -52,7 +52,7 @@ export default function Subscribe() {
             )} 
                   </span> 
           <span className="ml-auto inline-flex px-2"> 
-            <InboxArrowDownIcon className="h-8 w-8 text-orange-500 stroke-2 transition duration-500 group-hover:text-orange-100" /> 
+            <InboxArrowDownIcon className="h-8 w-8 stroke-2 text-orange-500 transition duration-500 group-hover:text-orange-100" /> 
           </span> 
         </button> 
         <div className="mt-2 text-center font-medium text-zinc-900">
