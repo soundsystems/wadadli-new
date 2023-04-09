@@ -50,7 +50,7 @@ const ContactForm = () => {
   />
   {formState.errors.firstName && <span className="text-xs text-red-500">This field is required</span>}
 </div>
-<div className="w-full pl-2 md:w-1/2">
+<div className="w-full md:w-1/2">
   <label htmlFor="lastName" className="mb-2 block text-sm font-bold">
     Last Name
   </label>
