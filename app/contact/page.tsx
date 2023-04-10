@@ -45,7 +45,7 @@ const Contact: NextPage = () => {
                 <div className="font-medium">Location:</div>
                 <address className="mb-2">
                 <a className='text-sm font-bold text-orange-500' href={mapsLink}>
-                  374 Tompkins Ave<br />
+                  419 Putnam Ave<br />
                   Brooklyn, NY 11216<br />
                   Tompkins Ave & Marcy Ave<br />
                   Bedford Stuyvesant
@@ -53,7 +53,7 @@ const Contact: NextPage = () => {
                 </address>
                 <div>
                   <div className="font-medium">Phone Number:</div>
-                  <a className='text-sm font-bold text-orange-500' href="tel:(917) 687-1508">(917) 687-1508</a>
+                  <a className='text-sm font-bold text-orange-500' href="+1 (347) 240-5913"></a>
                 </div>
                 <div className='mt-2'>
                   <div className="font-medium">Email:</div>

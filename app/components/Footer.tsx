@@ -40,7 +40,7 @@ function Footer({}: Props) {
           url="tel:13472405913"
           fgColor="black"
           bgColor="rgba(255, 255, 255, 0.440)" />*/}
-          <a href="tel:(917) 687-1508" className='h-[50px] w-[50px] text-center'>
+          <a href="tel:+1 (347) 240-5913" className='h-[50px] w-[50px] text-center'>
   < PhoneIcon className="m-auto mt-3 h-[24px] w-[24px] text-black transition duration-75 hover:scale-125" />
           </a>
     </div>
