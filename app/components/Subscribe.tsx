@@ -1,6 +1,6 @@
 import { InboxArrowDownIcon } from "@heroicons/react/24/outline";
 import { useFormFields, useMailChimpForm } from "use-mailchimp-form";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Lottie from "lottie-react";
 // import loadingSpinner from "/animations/loading-spinner.json";
 
@@ -18,22 +18,60 @@ export default function Subscribe() {
     EMAIL: "",
   });
 
-  useEffect(() => {
-    if (success) {
-      console.log("Success:", message);
-    } else if (error) {
-      console.error("Error:", message);
+  // useEffect(() => {
+  //   if (success) {
+  //     console.log("Success:", message);
+  //   } else if (error) {
+  //     console.error("Error:", message);
+  //   }
+  // }, [success, error, message]);
+
+  function isMobileSafari() {
+    const userAgent = navigator.userAgent;
+    const isSafari = /^((?!chrome|android).)*safari/i.test(userAgent);
+    const isMobile = /Mobi|Android/i.test(userAgent);
+    return isSafari && isMobile;
+  }
+
+  const [apiError, setApiError] = useState(false);
+  const [apiMessage, setApiMessage] = useState("");
+
+  const submitForm = async (fields: { EMAIL: string; }) => {
+    try {
+      const response = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email: fields.EMAIL }),
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+        setApiError(false);
+        setApiMessage(data.message);
+      } else {
+        setApiError(true);
+        setApiMessage(data.message);
+      }
+    } catch (error) {
+      setApiError(true);
+      setApiMessage("Error submitting form");
     }
-  }, [success, error, message]);
+  };
 
   return (
     <div className="mx-auto my-6">
       <form
-        onSubmit={event => {
-          event.preventDefault();
-          handleSubmit(fields);
-        }}
-      >
+  onSubmit={(event) => {
+    event.preventDefault();
+    if (isMobileSafari()) {
+      submitForm(fields);
+    } else {
+      handleSubmit(fields);
+    }
+  }}
+>
         
 <button
   type="submit"
@@ -82,6 +120,8 @@ export default function Subscribe() {
 
         <div className="mt-2 text-center font-medium text-zinc-900">
           {error && <span>{message}</span>}
+          {apiError && <span>{apiMessage}</span>}
+        {!apiError && <span>{apiMessage}</span>}
         </div>
       </form>
     </div>
