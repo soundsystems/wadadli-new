@@ -32,7 +32,7 @@ const Contact: NextPage = () => {
   return (
     <>
       <Header />
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto snap-mandatory snap-start px-4">
         <div className="@container md:@container/lg">
           <div className="my-8 flex flex-col items-center md:flex-row md:space-x-8">
             <div className="w-full grow md:w-2/3">
@@ -44,7 +44,7 @@ const Contact: NextPage = () => {
                 <div className="flex flex-col items-start">
                 <div className="font-medium">Location:</div>
                 <address className="mb-2">
-                <a className='text-sm font-bold text-orange-500' href={mapsLink}>
+                <a className='text-sm font-bold text-orange-500 hover:text-orange-200 transition-colors' href={mapsLink}>
                   419 Putnam Ave<br />
                   Brooklyn, NY 11216<br />
                   {/* Tompkins Ave & Marcy Ave<br />
@@ -53,11 +53,11 @@ const Contact: NextPage = () => {
                 </address>
                 <div>
                   <div className="font-medium">Phone Number:</div>
-                  <a className='text-sm font-bold text-orange-500' href="+1 (347) 240-5913">+1 (347) 240-5913</a>
+                  <a className='text-sm font-bold text-orange-500 hover:text-orange-200 transition-colors' href="+1 (347) 240-5913">+1 (347) 240-5913</a>
                 </div>
                 <div className='mt-2'>
                   <div className="font-medium">Email:</div>
-                  <a className='text-sm font-bold text-orange-500' href="mailto:wadadlijerk@gmail.com">wadadlijerk@gmail.com</a>
+                  <a className='text-sm font-bold text-orange-500 hover:text-orange-200 transition-colors' href="mailto:wadadlijerk@gmail.com">wadadlijerk@gmail.com</a>
                 </div>
                 </div>
                 </div>
