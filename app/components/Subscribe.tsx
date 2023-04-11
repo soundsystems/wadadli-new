@@ -26,50 +26,12 @@ export default function Subscribe() {
   //   }
   // }, [success, error, message]);
 
-  const [apiError, setApiError] = useState(false);
-  const [apiMessage, setApiMessage] = useState("");
-
-  const submitForm = async (fields: { EMAIL: string; }) => {
-    function isMobileSafari() {
-      const userAgent = navigator.userAgent;
-      const isSafari = /^((?!chrome|android).)*safari/i.test(userAgent);
-      const isMobile = /Mobi|Android/i.test(userAgent);
-      return isSafari && isMobile;
-    }
-  }
-  
-  {
-    try {
-      const response = await fetch("/api/subscribe", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email: fields.EMAIL }),
-      });
-
-      const data = await response.json();
-      if (response.ok) {
-        setApiError(false);
-        setApiMessage(data.message);
-      } else {
-        setApiError(true);
-        setApiMessage(data.message);
-      }
-    } catch (error) {
-      setApiError(true);
-      setApiMessage("Error submitting form");
-    }
-  };
-
   return (
     <div className="mx-auto my-6">
       <form
   onSubmit={(event) => {
     event.preventDefault();
-    if (isMobileSafari()) {
-      submitForm(fields);
-    } else {
+    if (!loading) {
       handleSubmit(fields);
     }
   }}
@@ -122,8 +84,6 @@ export default function Subscribe() {
 
         <div className="mt-2 text-center font-medium text-zinc-900">
           {error && <span>{message}</span>}
-          {apiError && <span>{apiMessage}</span>}
-        {!apiError && <span>{apiMessage}</span>}
         </div>
       </form>
     </div>
