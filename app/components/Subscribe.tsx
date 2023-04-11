@@ -26,17 +26,19 @@ export default function Subscribe() {
   //   }
   // }, [success, error, message]);
 
-  function isMobileSafari() {
-    const userAgent = navigator.userAgent;
-    const isSafari = /^((?!chrome|android).)*safari/i.test(userAgent);
-    const isMobile = /Mobi|Android/i.test(userAgent);
-    return isSafari && isMobile;
-  }
-
   const [apiError, setApiError] = useState(false);
   const [apiMessage, setApiMessage] = useState("");
 
   const submitForm = async (fields: { EMAIL: string; }) => {
+    function isMobileSafari() {
+      const userAgent = navigator.userAgent;
+      const isSafari = /^((?!chrome|android).)*safari/i.test(userAgent);
+      const isMobile = /Mobi|Android/i.test(userAgent);
+      return isSafari && isMobile;
+    }
+  }
+  
+  {
     try {
       const response = await fetch("/api/subscribe", {
         method: "POST",
