@@ -36,7 +36,7 @@ export default function HomePage() {
         {/* Hero */}
         <section id="menu" className="flex h-full snap-start flex-col items-center">
            {/* <Map /> */}
-          <Image src={menu} alt="Wadadli Jerk Menu" height={1600} width={900} className="" />
+          <Image src={menu} alt="Wadadli Jerk Menu" height={2000} width={1000}/>
         </section>
         {/* TODO: make the footer sticky */}
         <footer className="sticky">
