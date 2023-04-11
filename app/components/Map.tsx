@@ -7,12 +7,13 @@ function Map() {
   });
 
   const defaultCenter = { lat: 40.68452871196172, lng: -73.94436153324439 };
-  const markerIcon = {
-    url: '/images/logo.webp', // Replace this with the path to your logo
-    scaledSize: new google.maps.Size(40, 40), // Adjust these values to resize the icon
-  };
 
   if (!isLoaded) return <div>Loading...</div>;
+
+  // const markerIcon = {
+  //   url: '/images/logo.webp', // Replace this with the path to your logo
+  //   scaledSize: new google.maps.Size(40, 40), // Adjust these values to resize the icon
+  // };
 
   return (
     <>
@@ -22,7 +23,7 @@ function Map() {
           center={defaultCenter}
           mapContainerClassName="w-full h-96 rounded-lg"
         >
-          <Marker position={defaultCenter} icon={markerIcon} />
+          <Marker position={defaultCenter} />
         </GoogleMap>
       </div>
     </>
