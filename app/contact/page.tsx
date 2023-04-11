@@ -24,9 +24,9 @@ function isIOSDevice() {
 
 const mapsLink = isMobileDevice()
   ? isIOSDevice()
-  ? 'maps://maps.apple.com/?q=Wadadli+Jerk&daddr=40.684751,-73.944182'
-  : 'https://maps.google.com/maps?daddr=40.684751,-73.944182'
-    : 'https://www.google.com/maps?q=374+Tompkins+Ave+Brooklyn,+NY+11216';
+    ? 'maps://maps.apple.com/?q=Wadadli+Jerk&daddr=40.68452871196172,-73.94436153324439'
+    : 'https://maps.google.com/maps?daddr=40.68452871196172,-73.94436153324439'
+  : 'https://www.google.com/maps?q=419+Putnam+Ave+Brooklyn,+NY+11216';
 
 const Contact: NextPage = () => {
   return (
