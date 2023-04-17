@@ -53,7 +53,7 @@ const ContactForm = () => {
     onBlur={() => {}}
     type="text"
     id="firstName"
-    className="w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow outline outline-wadadli focus:shadow-wadadli focus:outline-none"
+    className="w-full appearance-none rounded border bg-zinc-50 px-3 py-2 leading-tight text-gray-700 shadow outline outline-wadadli focus:shadow-wadadli focus:outline-none"
     placeholder="First Name"
   />
   {formState.errors.firstName && <span className="text-xs text-red-500">This field is required</span>}
@@ -70,7 +70,7 @@ const ContactForm = () => {
     onBlur={() => {}}
     type="text"
     id="lastName"
-    className="w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow outline outline-wadadli focus:shadow-wadadli focus:outline-none"
+    className="w-full appearance-none rounded border bg-zinc-50 px-3 py-2 leading-tight text-gray-700 shadow outline outline-wadadli focus:shadow-wadadli focus:outline-none"
     placeholder="Last Name"
   />
   {formState.errors.lastName && <span className="text-xs text-red-500">This field is required</span>}
@@ -88,7 +88,7 @@ const ContactForm = () => {
   onBlur={() => {}}
   type="email"
   id="email"
-  className="w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow outline outline-wadadli focus:shadow-wadadli focus:outline-none"
+  className="w-full appearance-none rounded border bg-zinc-50 px-3 py-2 leading-tight text-gray-700 shadow outline outline-wadadli focus:shadow-wadadli focus:outline-none"
   placeholder="Email"
 />
 {formState.errors.email && <span className="text-xs text-red-500">Please enter a valid email address</span>}
@@ -104,7 +104,7 @@ const ContactForm = () => {
   whileFocus="focused"
   onBlur={() => {}}
   id="message"
-  className="w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow outline outline-wadadli focus:shadow-wadadli focus:outline-none"
+  className="w-full appearance-none rounded border bg-zinc-50 px-3 py-2 leading-tight text-gray-700 shadow outline outline-wadadli focus:shadow-wadadli focus:outline-none"
   placeholder="Message"
   rows={4}
 ></motion.textarea>
