@@ -11,7 +11,7 @@
         @apply bg-slate-800;
     }
 
-body {
+body { 
         background-position: center center;
         background-repeat: no-repeat;
         background-attachment: fixed;
