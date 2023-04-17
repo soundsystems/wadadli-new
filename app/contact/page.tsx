@@ -18,10 +18,15 @@ function Map() {
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY as string,
   });
-
-  const defaultCenter = { lat: 40.68452871196172, lng: -73.94436153324439 };
+  
+  const defaultCenter = { lat: 40.68480406277308, lng: -73.9444458390298 };
 
   if (!isLoaded) return <div>Loading...</div>;
+
+  const markerIcon = {
+    url: 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%23F59E0B\' width=\'50px\' height=\'50px\'%3E%3Ccircle cx=\'12\' cy=\'12\' r=\'10\' /%3E%3C/svg%3E',
+    scaledSize: new google.maps.Size(50, 50),
+  };
 
   return (
     <GoogleMap
@@ -29,7 +34,7 @@ function Map() {
       center={defaultCenter}
       mapContainerClassName="w-11/12 h-96 rounded-lg"
     >
-      <Marker position={defaultCenter} />
+      <Marker position={defaultCenter} icon={markerIcon} />
     </GoogleMap>
   );
 }
@@ -51,8 +56,8 @@ function isIOSDevice() {
 const mapsLink = isMobileDevice()
   ? isIOSDevice()
     ? 'maps://maps.apple.com/?q=Wadadli+Jerk&daddr=40.68452871196172,-73.94436153324439'
-    : 'https://maps.google.com/maps?daddr=40.68452871196172,-73.94436153324439'
-  : 'https://www.google.com/maps?q=419+Putnam+Ave+Brooklyn,+NY+11216';
+    : 'https://maps.google.com/place/Wadadli+Jerk/@40.6847353,-73.9445539,20.33z/data=!4m6!3m5!1s0x89c25bf027b56619:0xd79555c3b11d9932!8m2!3d40.6848676!4d-73.9444574!16s%2Fg%2F11tfn_q95s'
+  : 'https://www.google.com/maps/place/Wadadli+Jerk/@40.6847353,-73.9445539,20.33z/data=!4m6!3m5!1s0x89c25bf027b56619:0xd79555c3b11d9932!8m2!3d40.6848676!4d-73.9444574!16s%2Fg%2F11tfn_q95s';
 
     const Contact: NextPage = () => {
       return (
