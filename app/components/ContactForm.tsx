@@ -33,7 +33,7 @@ const ContactForm = () => {
   return (
 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
   {formSubmitted ? (
-    <div className="mx-auto w-full max-w-md rounded-xl bg-zinc-50/60 p-6 shadow-md">
+    <div className="w-full max-w-md rounded-xl bg-zinc-50/60 p-6 shadow-md">
       <h2 className="mb-4 text-2xl font-bold">Thank you for your submission!</h2>
       <p>Your message has been sent. We will get back to you shortly.</p>
     </div>
@@ -58,7 +58,7 @@ const ContactForm = () => {
   />
   {formState.errors.firstName && <span className="text-xs text-red-500">This field is required</span>}
 </div>
-<div className="w-full md:pl-1 md:w-1/2">
+<div className="w-full md:w-1/2 md:pl-1">
   <label htmlFor="lastName" className="mb-2 block text-left text-sm font-semibold text-zinc-900 md:text-right">
     Last Name
   </label>
