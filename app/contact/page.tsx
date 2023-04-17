@@ -24,9 +24,10 @@ function Map() {
   if (!isLoaded) return <div>Loading...</div>;
 
   const markerIcon = {
-    url: 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%23F97315\' width=\'50px\' height=\'50px\'%3E%3Ccircle cx=\'12\' cy=\'12\' r=\'10\' /%3E%3C/svg%3E',
-    scaledSize: new google.maps.Size(30, 30),
+    url: 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%23F97315\' width=\'25px\' height=\'40px\'%3E%3Cpath d=\'M12 0C5.4 0 0 5.4 0 12C0 18.6 12 24 12 24C12 24 24 18.6 24 12C24 5.4 18.6 0 12 0ZM12 17.3C9.6 17.3 7.7 15.4 7.7 13C7.7 10.6 9.6 8.7 12 8.7C14.4 8.7 16.3 10.6 16.3 13C16.3 15.4 14.4 17.3 12 17.3Z\' /%3E%3C/svg%3E',
+    scaledSize: new google.maps.Size(25, 40),
   };
+  
 
   return (
     <GoogleMap
