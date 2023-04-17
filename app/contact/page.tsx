@@ -75,7 +75,7 @@ const mapsLink = isMobileDevice()
                     {/* Location Info */}
                     <div className="w-full px-24 pb-6 md:pl-0">
                       <div className="inline-block rounded-xl border bg-zinc-50/60 p-2 text-left">
-                        <div className="rounded-xl bg-white p-4">
+                        <div className="rounded-xl bg-zinc-50 p-4">
                           <div className="flex flex-col items-start">
                             <div className="font-semibold">Location:</div>
                             <address className="mb-2">

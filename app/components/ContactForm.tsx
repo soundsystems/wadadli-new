@@ -122,7 +122,7 @@ const ContactForm = () => {
           <span className="inline-block h-screen align-middle" aria-hidden="true">
             &#8203;
           </span>
-          <div className="my-8 inline-block w-full max-w-md overflow-hidden rounded-md bg-white p-6 text-left align-middle shadow-xl transition-all">
+          <div className="my-8 inline-block w-full max-w-md overflow-hidden rounded-md bg-zinc-50 p-6 text-left align-middle shadow-xl transition-all">
             <Dialog.Title as="h3" className="text-lg font-medium leading-6 text-gray-900">
               Thank You
             </Dialog.Title>
