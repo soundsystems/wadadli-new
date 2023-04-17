@@ -53,7 +53,7 @@ const ContactForm = () => {
     onBlur={() => {}}
     type="text"
     id="firstName"
-    className="w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow outline outline-orange-500 focus:shadow-orange-500 focus:outline-none"
+    className="w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow outline outline-wadadli focus:shadow-wadadli focus:outline-none"
     placeholder="First Name"
   />
   {formState.errors.firstName && <span className="text-xs text-red-500">This field is required</span>}
@@ -70,7 +70,7 @@ const ContactForm = () => {
     onBlur={() => {}}
     type="text"
     id="lastName"
-    className="w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow outline outline-orange-500 focus:shadow-orange-500 focus:outline-none"
+    className="w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow outline outline-wadadli focus:shadow-wadadli focus:outline-none"
     placeholder="Last Name"
   />
   {formState.errors.lastName && <span className="text-xs text-red-500">This field is required</span>}
@@ -88,7 +88,7 @@ const ContactForm = () => {
   onBlur={() => {}}
   type="email"
   id="email"
-  className="w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow outline outline-orange-500 focus:shadow-orange-500 focus:outline-none"
+  className="w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow outline outline-wadadli focus:shadow-wadadli focus:outline-none"
   placeholder="Email"
 />
 {formState.errors.email && <span className="text-xs text-red-500">Please enter a valid email address</span>}
@@ -104,13 +104,13 @@ const ContactForm = () => {
   whileFocus="focused"
   onBlur={() => {}}
   id="message"
-  className="w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow outline outline-orange-500 focus:shadow-orange-500 focus:outline-none"
+  className="w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow outline outline-wadadli focus:shadow-wadadli focus:outline-none"
   placeholder="Message"
   rows={4}
 ></motion.textarea>
 {formState.errors.message && <span className="text-xs text-red-500">Please enter a message</span>}
 </div>
-        <button type="submit" className="w-full rounded-xl bg-orange-500 px-4 py-2 font-semibold text-white shadow-lg shadow-zinc-900/75 transition duration-500 hover:divide-orange-200 hover:bg-zinc-900/90 hover:shadow-md focus:border-none focus:shadow-orange-500">
+        <button type="submit" className="w-full rounded-xl bg-wadadli px-4 py-2 font-semibold text-white shadow-lg shadow-zinc-900/75 transition duration-500 hover:divide-orange-200 hover:bg-zinc-900/90 hover:shadow-md focus:border-none focus:shadow-wadadli">
           Send Message
         </button>
         </form>
@@ -134,7 +134,7 @@ const ContactForm = () => {
             <div className="mt-4">
               <button
                 type="button"
-                className="inline-flex justify-center rounded-md border border-transparent bg-orange-100 px-4 py-2 text-sm font-medium text-zinc-900 hover:bg-orange-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2"
+                className="inline-flex justify-center rounded-md border border-transparent bg-orange-100 px-4 py-2 text-sm font-medium text-zinc-900 hover:bg-orange-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-wadadli focus-visible:ring-offset-2"
                 onClick={closeModal}
               >
                 Close

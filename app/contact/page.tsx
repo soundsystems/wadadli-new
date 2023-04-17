@@ -24,7 +24,7 @@ function Map() {
   if (!isLoaded) return <div>Loading...</div>;
 
   const markerIcon = {
-    url: 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%23F97315\' width=\'25px\' height=\'40px\'%3E%3Cpath d=\'M12 0C5.4 0 0 5.4 0 12C0 18.6 12 24 12 24C12 24 24 18.6 24 12C24 5.4 18.6 0 12 0ZM12 17.3C9.6 17.3 7.7 15.4 7.7 13C7.7 10.6 9.6 8.7 12 8.7C14.4 8.7 16.3 10.6 16.3 13C16.3 15.4 14.4 17.3 12 17.3Z\' /%3E%3C/svg%3E',
+    url: 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%23FD6F00\' width=\'25px\' height=\'40px\'%3E%3Cpath d=\'M12 0C5.4 0 0 5.4 0 12C0 18.6 12 24 12 24C12 24 24 18.6 24 12C24 5.4 18.6 0 12 0ZM12 17.3C9.6 17.3 7.7 15.4 7.7 13C7.7 10.6 9.6 8.7 12 8.7C14.4 8.7 16.3 10.6 16.3 13C16.3 15.4 14.4 17.3 12 17.3Z\' /%3E%3C/svg%3E',
     scaledSize: new google.maps.Size(25, 40),
   };
   
@@ -81,7 +81,7 @@ const mapsLink = isMobileDevice()
                             <div className="font-semibold">Location:</div>
                             <address className="mb-2">
                               <a
-                                className="text-sm font-bold text-orange-500 transition-colors hover:text-orange-200"
+                                className="text-sm font-bold text-wadadli transition-colors hover:text-orange-200"
                                 href={mapsLink}
                               >
                                 419 Putnam Ave
@@ -95,7 +95,7 @@ const mapsLink = isMobileDevice()
                             <div>
                               <div className="font-semibold">Phone Number:</div>
                               <a
-                                className="text-sm font-bold text-orange-500 transition-colors hover:text-orange-200"
+                                className="text-sm font-bold text-wadadli transition-colors hover:text-orange-200"
                                 href="+1 (347) 240-5913"
                               >
                                 +1 (347) 240-5913
@@ -104,7 +104,7 @@ const mapsLink = isMobileDevice()
                             <div className="mt-2">
                               <div className="font-semibold">Email:</div>
                               <a
-                                className="text-sm font-bold text-orange-500 transition-colors hover:text-orange-200"
+                                className="text-sm font-bold text-wadadli transition-colors hover:text-orange-200"
                                 href="mailto:wadadlijerk@gmail.com"
                               >
                                 wadadlijerk@gmail.com

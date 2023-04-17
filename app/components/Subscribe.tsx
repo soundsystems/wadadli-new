@@ -40,12 +40,12 @@ export default function Subscribe() {
         
 <button
   type="submit"
-  className="group relative inline-flex w-full items-center justify-center divide-x divide-orange-500 overflow-hidden whitespace-nowrap rounded-xl bg-zinc-50/60 py-2 shadow-lg shadow-zinc-900/75 transition duration-500 hover:divide-orange-200 hover:bg-zinc-900/90 hover:shadow-md sm:w-56 sm:px-44 sm:py-2 md:w-96"
+  className="group relative inline-flex w-full items-center justify-center divide-x divide-wadadli overflow-hidden whitespace-nowrap rounded-xl bg-zinc-50/60 py-2 shadow-lg shadow-zinc-900/75 transition duration-500 hover:divide-orange-200 hover:bg-zinc-900/90 hover:shadow-md sm:w-56 sm:px-44 sm:py-2 md:w-96"
   disabled={success}
 >
   {!success ? (
     <div className="leading-none">
-      <span className="inline-flex px-2 font-semibold uppercase text-orange-500 transition duration-500 group-hover:text-orange-100 sm:text-sm md:text-lg lg:text-xl">
+      <span className="inline-flex px-2 font-semibold uppercase text-wadadli transition duration-500 group-hover:text-orange-100 sm:text-sm md:text-lg lg:text-xl">
         {loading ? (
           <>
             {/* <Lottie animationData={loadingSpinner} style={{width: "24px", height: "24px"}}  loop  autoplay></Lottie> */}
@@ -58,7 +58,7 @@ export default function Subscribe() {
       <span className="inline-flex px-2">
         {loading ? null : (
           <input
-            className="bg-transparent p-1 text-left text-sm font-bold text-orange-500 placeholder:text-center placeholder:text-orange-500 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-orange-500"
+            className="bg-transparent p-1 text-left text-sm font-bold text-wadadli placeholder:text-center placeholder:text-wadadli focus:border-transparent focus:outline-none focus:ring-2 focus:ring-wadadli"
             id="EMAIL"
             autoFocus
             required
@@ -71,13 +71,13 @@ export default function Subscribe() {
       </span>
     </div>
   ) : (
-    <span className="inline-flex px-2 text-xs font-semibold uppercase text-orange-500 transition duration-500 group-hover:text-orange-100 lg:text-lg">
+    <span className="inline-flex px-2 text-xs font-semibold uppercase text-wadadli transition duration-500 group-hover:text-orange-100 lg:text-lg">
       {message}
     </span>
   )}
   {!success && (
     <span className="ml-auto inline-flex px-2">
-      <InboxArrowDownIcon className="h-8 w-8 text-orange-500 transition duration-500 group-hover:text-orange-100 md:stroke-2" />
+      <InboxArrowDownIcon className="h-8 w-8 text-wadadli transition duration-500 group-hover:text-orange-100 md:stroke-2" />
     </span>
   )}
 </button>

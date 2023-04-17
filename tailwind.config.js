@@ -21,6 +21,10 @@ module.exports = {
         },
         },
       },
+
+      colors: {
+        'wadadli': '#FD6F00',
+      },
   plugins: [
     require('tailwind-scrollbar'),
     require('@tailwindcss/aspect-ratio'),
