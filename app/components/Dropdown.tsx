@@ -12,7 +12,7 @@ return (             <div className="relative">
                       <Menu>
                         {({ open }) => (
                           <>
-                            <Menu.Button className="rounded-xl bg-zinc-50/60 p-2 text-wadadli shadow-lg shadow-zinc-900/75 transition duration-300 ease-in-out hover:bg-zinc-900/90 hover:text-orange-200 hover:shadow-md focus:text-orange-100 focus:outline-none">
+                            <Menu.Button className="rounded-xl bg-zinc-50/80 p-2 text-wadadli shadow-lg shadow-zinc-900/75 transition duration-300 ease-in-out hover:bg-zinc-900/90 hover:text-orange-200 hover:shadow-md focus:text-orange-100 focus:outline-none">
                             <motion.div  
                             whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
                             <Bars3Icon className="h-6 w-6" />
@@ -27,7 +27,7 @@ return (             <div className="relative">
                                 animate={{ height: "auto", opacity: 1 }}
                                 
                                 transition={{ duration: 0.15 }}
-                                className="absolute right-0 z-10 mt-2 rounded-xl border border-orange-200 bg-zinc-50/90 font-semibold text-wadadli shadow focus:outline-none"
+                                className="absolute right-0 z-10 mt-2 rounded-xl border border-orange-200 bg-zinc-50/80 font-semibold text-wadadli shadow focus:outline-none"
                               >
                                 <Menu.Item>
                                   {({ active }) => (
