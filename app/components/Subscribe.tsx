@@ -58,7 +58,7 @@ export default function Subscribe() {
       <span className="inline-flex px-2">
         {loading ? null : (
           <input
-            className="bg-transparent p-1 text-center text-sm font-bold text-orange-500 placeholder:text-orange-500 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-orange-500"
+            className="bg-transparent p-1 text-left text-sm font-bold text-orange-500 placeholder:text-center placeholder:text-orange-500 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-orange-500"
             id="EMAIL"
             autoFocus
             required
@@ -83,7 +83,7 @@ export default function Subscribe() {
 </button>
 
 
-        <div className="mt-2 text-center font-medium text-zinc-900">
+        <div className="mt-2 w-auto text-center text-zinc-900">
           {error && <span>{message}</span>}
         </div>
       </form>
