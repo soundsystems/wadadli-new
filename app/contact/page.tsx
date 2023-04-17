@@ -64,7 +64,7 @@ const mapsLink = isMobileDevice()
                 <div className="mx-auto w-full max-w-7xl">
                   <div className="my-auto flex flex-col place-items-center justify-center space-x-3 md:flex-row md:justify-center">
                     {/* Map */}
-                      <div className="h-full w-full overflow-hidden pb-6 pl-14 pr-6 md:ml-48 md:pb-11">
+                      <div className="h-full w-full snap-start overflow-hidden pb-6 pl-14 pr-6 md:ml-48 md:pb-11">
                         <Map />
                       </div>
                     {/* Location Info */}

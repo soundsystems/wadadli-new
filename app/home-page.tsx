@@ -38,7 +38,7 @@ export default function HomePage() {
            {/* <Map /> */}
           <Image src={menu} alt="Wadadli Jerk Menu" height={2000} width={1000}/>
         </section>
-        {/* TODO: make the footer sticky */}
+
         <footer className="sticky">
         <Footer />
         </footer>
