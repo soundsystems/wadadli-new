@@ -24,8 +24,8 @@ function Map() {
   if (!isLoaded) return <div>Loading...</div>;
 
   const markerIcon = {
-    url: 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%23F59E0B\' width=\'50px\' height=\'50px\'%3E%3Ccircle cx=\'12\' cy=\'12\' r=\'10\' /%3E%3C/svg%3E',
-    scaledSize: new google.maps.Size(50, 50),
+    url: 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%23F97315\' width=\'50px\' height=\'50px\'%3E%3Ccircle cx=\'12\' cy=\'12\' r=\'10\' /%3E%3C/svg%3E',
+    scaledSize: new google.maps.Size(30, 30),
   };
 
   return (
