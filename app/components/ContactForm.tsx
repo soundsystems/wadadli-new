@@ -38,10 +38,10 @@ const ContactForm = () => {
       <p>Your message has been sent. We will get back to you shortly.</p>
     </div>
   ) : (
-    <form onSubmit={handleSubmit(onSubmit)} className="mx-auto w-full max-w-md rounded-lg bg-zinc-50/60 p-4 shadow-md">
+    <form onSubmit={handleSubmit(onSubmit)} className="mx-auto w-full max-w-lg rounded-lg bg-zinc-50/60 p-4 shadow-md">
         <h2 className="mb-4 text-center text-xl font-bold text-zinc-900">Contact Us</h2>
         <div className="mb-4 flex flex-wrap">
-<div className="mb-4 w-full pr-2 md:mb-0 md:w-1/2">
+<div className="mb-4 w-full md:pr-1 md:mb-0 md:w-1/2">
   <label htmlFor="firstName" className="mb-2 block text-left text-sm font-semibold text-zinc-900">
     First Name
   </label>
@@ -58,7 +58,7 @@ const ContactForm = () => {
   />
   {formState.errors.firstName && <span className="text-xs text-red-500">This field is required</span>}
 </div>
-<div className="w-full md:w-1/2">
+<div className="w-full md:pl-1 md:w-1/2">
   <label htmlFor="lastName" className="mb-2 block text-left text-sm font-semibold text-zinc-900 md:text-right">
     Last Name
   </label>
@@ -110,7 +110,7 @@ const ContactForm = () => {
 ></motion.textarea>
 {formState.errors.message && <span className="text-xs text-red-500">Please enter a message</span>}
 </div>
-        <button type="submit" className="w-full rounded-xl bg-orange-500 px-4 py-2 font-semibold text-white shadow-lg shadow-zinc-900/75 outline transition duration-500 hover:divide-orange-200 hover:bg-zinc-900/90 hover:shadow-md focus:shadow-orange-500 focus:outline-none">
+        <button type="submit" className="w-full rounded-xl bg-orange-500 px-4 py-2 font-semibold text-white shadow-lg shadow-zinc-900/75 transition duration-500 hover:divide-orange-200 hover:bg-zinc-900/90 hover:shadow-md focus:border-none focus:shadow-orange-500">
           Send Message
         </button>
         </form>
@@ -134,7 +134,7 @@ const ContactForm = () => {
             <div className="mt-4">
               <button
                 type="button"
-                className="inline-flex justify-center rounded-md border border-transparent bg-orange-100 px-4 py-2 text-sm font-medium text-orange-900 hover:bg-orange-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2"
+                className="inline-flex justify-center rounded-md border border-transparent bg-orange-100 px-4 py-2 text-sm font-medium text-zinc-900 hover:bg-orange-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2"
                 onClick={closeModal}
               >
                 Close
