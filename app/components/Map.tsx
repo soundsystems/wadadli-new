@@ -21,7 +21,7 @@ function Map() {
         <GoogleMap
           zoom={17}
           center={defaultCenter}
-          mapContainerClassName="w-full h-96 rounded-lg"
+          mapContainerClassName="w-10/12 h-96 rounded-lg"
         >
           <Marker position={defaultCenter} />
         </GoogleMap>

@@ -30,21 +30,21 @@ const mapsLink = isMobileDevice()
 
 const Contact: NextPage = () => {
   return (
-    <>
-      <Header />
-      <div className="container mx-auto snap-mandatory snap-start px-4">
-        <div className="@container md:@container/lg">
-          <div className="my-8 flex flex-col items-center md:flex-row md:space-x-8">
-            <div className="w-full grow md:w-2/3">
-              <Map />
-            </div>
-            <div className="w-full md:w-1/3">
-              <div className="inline-block rounded-xl border bg-zinc-50/60 p-2 text-left">
-                <div className='rounded-xl bg-white p-4'>
+<>
+  <Header />
+  <div className="flex flex-col items-center justify-center">
+    <div className="w-full">
+      <div className="my-8 flex flex-col place-items-center justify-center space-x-3 md:flex-row">
+        <div className="w-full">
+          <Map />
+        </div>
+        <div className="w-full">
+          <div className="inline-block rounded-xl border bg-zinc-50/60 p-2 text-left">
+            <div className='rounded-xl bg-white p-4'>
                 <div className="flex flex-col items-start">
-                <div className="font-medium">Location:</div>
+                <div className="font-semibold">Location:</div>
                 <address className="mb-2">
-                <a className='text-sm font-bold text-orange-500 hover:text-orange-200 transition-colors' href={mapsLink}>
+                <a className='text-sm font-bold text-orange-500 transition-colors hover:text-orange-200' href={mapsLink}>
                   419 Putnam Ave<br />
                   Brooklyn, NY 11216<br />
                   {/* Tompkins Ave & Marcy Ave<br />
@@ -52,23 +52,23 @@ const Contact: NextPage = () => {
                 </a>
                 </address>
                 <div>
-                  <div className="font-medium">Phone Number:</div>
-                  <a className='text-sm font-bold text-orange-500 hover:text-orange-200 transition-colors' href="+1 (347) 240-5913">+1 (347) 240-5913</a>
+                  <div className="font-semibold">Phone Number:</div>
+                  <a className='text-sm font-bold text-orange-500 transition-colors hover:text-orange-200' href="+1 (347) 240-5913">+1 (347) 240-5913</a>
                 </div>
                 <div className='mt-2'>
-                  <div className="font-medium">Email:</div>
-                  <a className='text-sm font-bold text-orange-500 hover:text-orange-200 transition-colors' href="mailto:wadadlijerk@gmail.com">wadadlijerk@gmail.com</a>
-                </div>
-                </div>
-                </div>
-              </div>
+                  <div className="font-semibold">Email:</div>
+                  <a className='text-sm font-bold text-orange-500 transition-colors hover:text-orange-200' href="mailto:wadadlijerk@gmail.com">wadadlijerk@gmail.com</a>
+                  </div>
+                  </div>
             </div>
           </div>
-            <ContactForm />
         </div>
       </div>
-      <Footer />
-    </>
+      <ContactForm />
+    </div>
+  </div>
+  <Footer />
+</>
   );
 };
 
