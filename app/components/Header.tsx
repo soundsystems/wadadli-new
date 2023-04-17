@@ -14,7 +14,7 @@ export default function Header({ }) {
 
   return (
     // <div className={`${isContactPage ? 'fixed' : 'sticky'} top-0 z-50 flex w-full max-w-full items-center justify-between gap-x-2 p-6 text-center`}>
-    <div className='sticky top-0 z-50 flex w-full max-w-full items-center justify-between gap-x-2 p-6 text-center'>
+    <div className='top-0 z-50 flex w-full max-w-full items-center justify-between gap-x-2 p-6 text-center'>
       <motion.div
         initial={{
           x: -500,
