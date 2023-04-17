@@ -9,7 +9,7 @@ type Props = {}
 function Footer({}: Props) {
   return (
     <>
-    <div className='mx-auto flex flex-col p-2'>
+    <div className='mx-auto flex flex-col'>
 <Subscribe/>
     </div>
    <div className="flex justify-between px-11 pb-2">
