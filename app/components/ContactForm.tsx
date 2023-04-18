@@ -39,6 +39,7 @@ const ContactForm = () => {
     </div>
   ) : (
     <form onSubmit={handleSubmit(onSubmit)} className="mx-auto w-full max-w-lg rounded-lg bg-zinc-50/60 p-4 shadow-md">
+       <div className="rounded-xl bg-zinc-50 p-4">
         <h2 className="mb-4 text-center text-xl font-bold text-zinc-900">Contact Us</h2>
         <div className="mb-4 flex flex-wrap">
 <div className="mb-4 w-full md:mb-0 md:w-1/2 md:pr-1">
@@ -104,7 +105,7 @@ const ContactForm = () => {
   whileFocus="focused"
   onBlur={() => {}}
   id="message"
-  className="w-full appearance-none rounded border bg-zinc-50 px-3 py-2 leading-tight text-gray-700 shadow outline outline-wadadli focus:shadow-wadadli focus:outline-none"
+  className="w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow outline outline-wadadli focus:shadow-wadadli focus:outline-none"
   placeholder="Message"
   rows={4}
 ></motion.textarea>
@@ -113,6 +114,7 @@ const ContactForm = () => {
         <button type="submit" className="w-full rounded-xl bg-wadadli px-4 py-2 font-semibold text-white shadow-lg shadow-zinc-900/75 transition duration-500 hover:divide-orange-200 hover:bg-zinc-900/90 hover:shadow-md focus:border-none focus:shadow-wadadli">
           Send Message
         </button>
+        </div>
         </form>
   )}
 
