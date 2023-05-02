@@ -11,13 +11,13 @@ const Dropdown = (props: Props) => {
 return (             <div className="relative">
                       <Menu>
                         {({ open }) => (
-                          <>
-                            <Menu.Button className="rounded-xl bg-zinc-50/70 p-2 text-wadadli shadow-lg shadow-zinc-900/75 transition duration-300 ease-in-out hover:bg-zinc-900/90 hover:text-orange-200 hover:shadow-md focus:text-wadadli focus:outline-none">
-                            <motion.div  
-                            whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+                          <> 
+                          <motion.div  
+                          whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+                            <Menu.Button className="hover:text-orange-200 text-wadadli rounded-xl bg-zinc-50/70 p-2 shadow-lg shadow-zinc-950/75 transition duration-300 ease-in-out hover:bg-zinc-950/90 hover:shadow-md focus:text-wadadli focus:outline-none">
                             <Bars3Icon className="h-6 w-6" />
-                            </motion.div>
                             </Menu.Button>
+                            </motion.div>
     
                             {open && (
                               <Menu.Items
@@ -33,7 +33,7 @@ return (             <div className="relative">
                                   {({ active }) => (
                                     <Link
                                       className={`${
-                                        active ? "rounded-t-xl bg-zinc-900 text-orange-100 transition duration-300 ease-in-out" : ""
+                                        active ? "rounded-t-xl bg-zinc-950 text-orange-100 transition duration-300 ease-in-out" : ""
                                       } block whitespace-nowrap px-5 py-3`}
                                       href="/"
                                     >
@@ -45,7 +45,7 @@ return (             <div className="relative">
                                   {({ active }) => (
                                     <a
                                       className={`${
-                                        active ? "bg-zinc-900 text-orange-100 transition duration-300 ease-in-out" : ""
+                                        active ? "bg-zinc-950 text-orange-100 transition duration-300 ease-in-out" : ""
                                       } block whitespace-nowrap px-5 py-3`}
                                       href="#"
                                     >
@@ -57,7 +57,7 @@ return (             <div className="relative">
                                   {({ active }) => (
                                     <a
                                       className={`${
-                                        active ? "bg-zinc-900 text-orange-100 transition duration-300 ease-in-out" : ""
+                                        active ? "bg-zinc-950 text-orange-100 transition duration-300 ease-in-out" : ""
                                       } block whitespace-nowrap px-5 py-3`}
                                       href="#"
                                     >
@@ -69,7 +69,7 @@ return (             <div className="relative">
                                   {({ active }) => (
                                     <a
                                       className={`${
-                                        active ? "bg-zinc-900 text-orange-100 transition duration-300 ease-in-out" : ""
+                                        active ? "bg-zinc-950 text-orange-100 transition duration-300 ease-in-out" : ""
                                       } block whitespace-nowrap px-5 py-3`}
                                       href="/gallery"
                                     >
@@ -81,7 +81,7 @@ return (             <div className="relative">
                                   {({ active }) => (
                                     <Link
                                       className={`${
-                                        active ? " bg-zinc-900 text-orange-100 transition duration-300 ease-in-out" : ""
+                                        active ? " bg-zinc-950 text-orange-100 transition duration-300 ease-in-out" : ""
                                       } block whitespace-nowrap px-5 py-3`}
                                       href="/contact"
                                     >
@@ -93,7 +93,7 @@ return (             <div className="relative">
                                   {({ active }) => (
                                     <a
                                       className={`${
-                                        active ? "rounded-b-xl bg-zinc-900 text-orange-100 transition duration-300 ease-in-out" : ""
+                                        active ? "rounded-b-xl bg-zinc-950 text-orange-100 transition duration-300 ease-in-out" : ""
                                       } block whitespace-nowrap px-5 py-3`}
                                       href="#"
                                     >
