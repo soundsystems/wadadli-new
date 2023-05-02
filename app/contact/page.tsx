@@ -77,7 +77,7 @@ const mapsLink = isMobileDevice()
                       <div className="inline-block rounded-xl border bg-zinc-50/60 p-2 text-left">
                         <div className="rounded-xl bg-zinc-50 p-4">
                           <div className="flex flex-col items-start">
-                            <div className="font-semibold">Location:</div>
+                            <div className="font-semibold text-zinc-950">Location:</div>
                             <address className="mb-2">
                               <a
                                 className="text-sm font-bold text-wadadli transition-colors hover:text-orange-200"
@@ -92,7 +92,7 @@ const mapsLink = isMobileDevice()
                               </a>
                             </address>
                             <div>
-                              <div className="font-semibold">Phone Number:</div>
+                              <div className="font-semibold text-zinc-950">Phone Number:</div>
                               <a
                                 className="text-sm font-bold text-wadadli transition-colors hover:text-orange-200"
                                 href="+1 (347) 240-5913"
@@ -101,7 +101,7 @@ const mapsLink = isMobileDevice()
                               </a>
                             </div>
                             <div className="mt-2">
-                              <div className="font-semibold">Email:</div>
+                              <div className="font-semibold text-zinc-950">Email:</div>
                               <a
                                 className="text-sm font-bold text-wadadli transition-colors hover:text-orange-200"
                                 href="mailto:wadadlijerk@gmail.com"
