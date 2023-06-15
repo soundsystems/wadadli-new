@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 
 
+<link rel="manifest" href="/site.webmanifest" />
 export const metadata = {
   title: 'Welcome to Wadadli',
   description: 'Wadadli Jerk is a family owned and operated business that specializes in authentic Jamaican Jerk cuisine. We are located in the heart of the Brooklyn, New York.',

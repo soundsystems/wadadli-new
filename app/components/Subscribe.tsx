@@ -1,4 +1,4 @@
-import { InboxArrowDownIcon } from "@heroicons/react/24/outline";
+import { ArrowRightIcon } from "@heroicons/react/20/solid";
 import { useFormFields, useMailChimpForm } from "use-mailchimp-form";
 import { useState } from "react";
 import Lottie from "lottie-react";
@@ -29,6 +29,9 @@ export default function Subscribe() {
   return (
     <div className="flex justify-center">
     <div className="mx-auto my-6">
+      <h1 className="text-2xl font-bold text-center text-wadadli">
+        join the family
+      </h1>
       <form
   onSubmit={(event) => {
     event.preventDefault();
@@ -40,19 +43,19 @@ export default function Subscribe() {
         
 <button
   type="submit"
-  className="group relative inline-flex w-full items-center justify-center divide-x divide-wadadli overflow-hidden whitespace-nowrap rounded-xl bg-zinc-50/70 py-2 shadow-lg shadow-zinc-950/75 transition duration-500 hover:divide-orange-200 hover:bg-zinc-950/90 hover:shadow-md sm:w-56 sm:px-44 sm:py-2 md:w-96"
+  className="group relative inline-flex w-full items-center justify-center divide-x divide-wadadli overflow-hidden whitespace-nowrap rounded-xl bg-zinc-50/70 backdrop-blur-sm py-2 shadow-lg shadow-zinc-950/75 transition duration-500 hover:divide-orange-100 hover:bg-zinc-950/90 hover:shadow-md sm:w-56 sm:px-44 sm:py-2 md:w-96"
   disabled={success}
 >
   {!success ? (
     <div className="leading-none">
-      <span className="inline-flex px-2 font-semibold uppercase text-wadadli transition duration-500 group-hover:text-orange-100 sm:text-sm md:text-lg lg:text-xl">
+      <span className="inline-flex px-2 font-semibold text-wadadli transition duration-500 group-hover:text-orange-100 sm:text-sm md:text-lg lg:text-xl">
         {loading ? (
           <>
             {/* <Lottie animationData={loadingSpinner} style={{width: "24px", height: "24px"}}  loop  autoplay></Lottie> */}
             <span>submitting</span>
           </>
         ) : (
-          "Subscribe"
+          "subscribe"
         )}
       </span>
       <span className="inline-flex px-2">
@@ -65,7 +68,7 @@ export default function Subscribe() {
             type="email"
             value={fields.EMAIL}
             onChange={handleFieldChange}
-            placeholder="Join the family"
+            placeholder="email"
           />
         )}
       </span>
@@ -77,11 +80,10 @@ export default function Subscribe() {
   )}
   {!success && (
     <span className="ml-auto inline-flex px-2">
-      <InboxArrowDownIcon className="h-8 w-8 text-wadadli transition duration-500 group-hover:text-orange-100 md:stroke-2" />
+      <ArrowRightIcon className="h-6 w-6 text-wadadli transition duration-500 group-hover:text-orange-100 md:stroke-2" />
     </span>
   )}
 </button>
-
 
         <div className="mt-2 w-auto text-center text-zinc-950">
           {error && <span>{message}</span>}

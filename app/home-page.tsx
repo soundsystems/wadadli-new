@@ -17,10 +17,6 @@ import Footer from "./components/Footer";
 
 //if (typeof window === "undefined") {LogRocket.init('vdixgc/wadadli');}
 
-//Lazy load the gallery section
-// const Gallery = dynamic(() => import('./gallery/page'));
-
-
 export default function HomePage() {
   return (
     <>
@@ -34,7 +30,7 @@ export default function HomePage() {
         <Header />
         </header>
         {/* Hero */}
-        <section id="menu" className="flex h-full snap-start flex-col items-center">
+        <section id="menu" className="flex h-full snap-start flex-col items-center scrollbar-none">
            {/* <Map /> */}
           <Image src={menu} alt="Wadadli Jerk Menu" height={2000} width={1000}/>
         </section>

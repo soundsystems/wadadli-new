@@ -49,7 +49,7 @@ let margin = 11;
     <>
     <Header/>
     <MotionConfig transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1] }}>
-      <div className="h-full pt-40
+      <div className="scrollbar-none h-full pt-40
       ">
         <div className="mx-auto flex max-w-7xl flex-col justify-center">
           <div className="relative overflow-hidden">
@@ -110,7 +110,7 @@ let margin = 11;
             </AnimatePresence>
           </div>
           
-          <div className="relative my-4 inset-x-0 flex justify-center overflow-hidden">
+          <div className="relative inset-x-0 my-4 flex justify-center overflow-hidden">
             <motion.div
               animate={{
                 x: `-${

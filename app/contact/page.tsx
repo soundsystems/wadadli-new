@@ -32,7 +32,7 @@ function Map() {
     <GoogleMap
       zoom={17}
       center={defaultCenter}
-      mapContainerClassName="w-11/12 h-96 rounded-lg"
+      mapContainerClassName="h-96 rounded-lg"
     >
       <Marker position={defaultCenter} icon={markerIcon} />
     </GoogleMap>
@@ -63,24 +63,20 @@ const mapsLink = isMobileDevice()
       return (
         <>
           <Header/>          
-          <div className="flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-center scrollbar-none"> 
             <div className="w-full">
-              <div className="flex flex-col place-items-center justify-center space-x-3 md:flex-row md:justify-center">
+              {/* <div className="flex flex-col place-items-center justify-center space-x-3 md:flex-row-reverse"> */}
                 <div className="mx-auto w-full max-w-7xl">
-                  <div className="my-auto flex flex-col place-items-center justify-center space-x-3 md:flex-row md:justify-center">
-                    {/* Map */}
-                      <div className="h-full w-full snap-start overflow-hidden pb-6 pl-14 pr-6 md:ml-48 md:pb-11">
-                        <Map />
-                      </div>
+                  <div className="my-auto flex flex-col place-items-center justify-center space-x-3 md:flex-row-reverse">
                     {/* Location Info */}
-                    <div className="w-full px-24 pb-6 md:pl-0">
+                    <div className="pb-6 md:flex md:w-1/2 md:justify-center">
                       <div className="inline-block rounded-xl border bg-zinc-50/60 p-2 text-left">
                         <div className="rounded-xl bg-zinc-50 p-4">
                           <div className="flex flex-col items-start">
                             <div className="font-semibold text-zinc-950">Location:</div>
                             <address className="mb-2">
                               <a
-                                className="text-sm font-bold text-wadadli transition-colors hover:text-orange-200"
+                                className="text-sm font-bold text-wadadli transition-colors hover:text-zinc-950"
                                 href={mapsLink}
                               >
                                 419 Putnam Ave
@@ -94,7 +90,7 @@ const mapsLink = isMobileDevice()
                             <div>
                               <div className="font-semibold text-zinc-950">Phone Number:</div>
                               <a
-                                className="text-sm font-bold text-wadadli transition-colors hover:text-orange-200"
+                                className="text-sm font-bold text-wadadli transition-colors hover:text-zinc-950"
                                 href="+1 (347) 240-5913"
                               >
                                 +1 (347) 240-5913
@@ -103,20 +99,38 @@ const mapsLink = isMobileDevice()
                             <div className="mt-2">
                               <div className="font-semibold text-zinc-950">Email:</div>
                               <a
-                                className="text-sm font-bold text-wadadli transition-colors hover:text-orange-200"
+                                className="text-sm font-bold text-wadadli transition-colors hover:text-zinc-950"
                                 href="mailto:wadadlijerk@gmail.com"
                               >
                                 wadadlijerk@gmail.com
                               </a>
+                              <div className="mt-2 text-zinc-950">
+                              <div className="font-semibold text-zinc-950">Hours:</div>
+                              <div className='text-wadadli inline-block'>Tue:</div> 11am-7pm
+                              <div className='text-wadadli inline-block pl-1'>Wed:</div> 11am-7pm
+                              <br className='md:hidden'/>
+                              <div className='text-wadadli inline-block md:pl-1'>Thu:</div> 11am-9pm
+                              <br className='hidden md:inline'/>
+                              <div className='text-wadadli inline-block pl-1 md:pl-0'>Fri:</div> 11am-9pm
+                              <br className='md:hidden'/>
+                              <div className='text-wadadli inline-block md:pl-1'>Sat:</div> 11am-9pm
+                              <div className='text-wadadli inline-block pl-1'>Sun:</div> 11am-7pm
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
+                    {/* Map */}
+                      <div className="h-full w-full snap-start overflow-hidden pb-6 px-4 md:pb-11 md:w-1/2">
+                        <Map />
+                      </div>
                   </div>
                 </div>
-              </div>
+              {/* </div> */}
+              <div className='w-full px-1'>
               <ContactForm />
+              </div>
             </div>
           </div>
           <Footer />

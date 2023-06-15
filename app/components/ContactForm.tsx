@@ -33,13 +33,14 @@ const ContactForm = () => {
   return (
 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
   {formSubmitted ? (
-    <div className="w-full max-w-md rounded-xl bg-zinc-50/60 p-6 shadow-lg">
+    <div className="invisible">
+    {/* <div className="w-full max-w-md rounded-xl bg-zinc-50/60 p-6 shadow-lg">
       <h2 className="mb-4 text-2xl font-bold">Thank you for your submission!</h2>
-      <p>Your message has been sent. We will get back to you shortly.</p>
+     <p>Your message has been sent. We will get back to you shortly.</p> */}
     </div>
   ) : (
     <form onSubmit={handleSubmit(onSubmit)} className="mx-auto w-full max-w-lg rounded-lg bg-zinc-50/60 p-4">
-       <div className="rounded-xl bg-zinc-50 p-4">
+       <div className="rounded-xl p-4">
         <h2 className="mb-4 text-center text-xl font-bold text-zinc-900">Contact Us</h2>
         <div className="mb-4 flex flex-wrap">
 <div className="mb-4 w-full md:mb-0 md:w-1/2 md:pr-1">
@@ -111,8 +112,8 @@ const ContactForm = () => {
 ></motion.textarea>
 {formState.errors.message && <span className="text-xs text-red-500">Please enter a message</span>}
 </div>
-        <button type="submit" className="w-full rounded-xl bg-wadadli px-4 py-2 font-semibold text-white shadow-lg shadow-zinc-950/75 transition duration-500 hover:divide-orange-200 hover:bg-zinc-950/90 hover:shadow-md focus:border-none focus:shadow-wadadli">
-          Send Message
+        <button type="submit" className="w-full rounded-xl bg-zinc-50 px-4 py-2 font-semibold text-wadadli shadow-lg shadow-zinc-950/75 transition duration-500 hover:divide-orange-100 hover:bg-zinc-950/90 hover:text-orange-100 hover:shadow-md focus:border-none focus:shadow-wadadli">
+          send message
         </button>
         </div>
         </form>
@@ -136,7 +137,7 @@ const ContactForm = () => {
             <div className="mt-4">
               <button
                 type="button"
-                className="inline-flex justify-center rounded-md border border-transparent bg-orange-100 px-4 py-2 text-sm font-medium text-zinc-950 hover:bg-orange-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-wadadli focus-visible:ring-offset-2"
+                className="inline-flex justify-center rounded-md border border-transparent bg-zinc-50/60 px-4 py-2 text-sm font-medium text-zinc-950 hover:bg-orange-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-wadadli focus-visible:ring-offset-2"
                 onClick={closeModal}
               >
                 Close

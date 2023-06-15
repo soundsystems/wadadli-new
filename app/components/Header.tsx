@@ -14,7 +14,7 @@ export default function Header({ }) {
 
   return (
     // <div className={`${isContactPage ? 'fixed' : 'sticky'} top-0 z-50 flex w-full max-w-full items-center justify-between gap-x-2 p-6 text-center`}>
-    <div className='top-0 z-50 flex w-full max-w-full items-center justify-between gap-x-2 p-6 text-center'>
+    <div className='top-0 z-50 flex w-full max-w-full items-center justify-between gap-x-2 pr-3 pb-8 text-center'>
       <motion.div
         initial={{
           x: -500,
@@ -32,7 +32,7 @@ export default function Header({ }) {
         className="flex flex-row"
       >
   <Link href="#menu">
-  <Image src='/logo.webp' alt="Wadadli Jerk Logo" width='200' height='200' priority className="mx-2 h-20 w-20 transition duration-75 hover:scale-125" />
+  <Image src='/logo.png' alt="Wadadli Jerk Logo" width='200' height='200' priority className="w-[4.5rem] lg:w-24 md:w-20 transition duration-75 hover:scale-125" />
   </Link>
       </motion.div>
 

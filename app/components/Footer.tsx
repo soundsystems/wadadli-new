@@ -9,30 +9,30 @@ type Props = {}
 function Footer({}: Props) {
   return (
     <>
-    <div className='mx-auto flex flex-col'>
+    <div className='mx-auto flex flex-col pt-2'>
 <Subscribe/>
     </div>
-   <div className="flex justify-between px-11 pb-2">
+   <div className="flex justify-between px-11 pt-6 pb-3">
         <SocialIcon
-          className="transition duration-75 hover:scale-125"
+          className="transition duration-75 hover:scale-125 backdrop-blur-sm rounded-full"
           url="https://www.facebook.com/WadadliJerkpage/"
-          fgColor="black"
-          bgColor="transparent"
-          // bgColor="rgba(255, 255, 255, 0.440)"
+          fgColor="rgba(10, 10, 10, 1.0)"
+          // bgColor="transparent"
+          bgColor="rgba(250, 250, 250, .30)"
         />
         <SocialIcon
           className="transition duration-75 hover:scale-125"
           url="https://www.instagram.com/wadadlijerk/?hl=en"
-          fgColor="black"
-          bgColor="transparent"
-          // bgColor="rgba(255, 255, 255, 0.440)"
+          fgColor= "rgba(10, 10, 10, 1.0)"
+          // bgColor="transparent"
+          bgColor="rgba(250, 250, 250, .30)"
         />
         <SocialIcon
-          className="transition duration-75 hover:scale-125"
+          className="transition duration-75 hover:scale-125 backdrop-blur-sm rounded-full"
           url="mailto:wadadlijerk@gmail.com"
-          fgColor="black"
-          bgColor="transparent"
-          // bgColor="rgba(255, 255, 255, 0.440)"
+          fgColor="rgba(10, 10, 10, 1.0)"
+          // bgColor="transparent"
+          bgColor="rgba(250, 250, 250, .30)"
         />
         {/* TODO: submit pull request to use simple phone for tel: html */}
         {/* <SocialIcon
@@ -40,8 +40,8 @@ function Footer({}: Props) {
           url="tel:13472405913"
           fgColor="black"
           bgColor="rgba(255, 255, 255, 0.440)" />*/}
-          <a href="tel:+1 (347) 240-5913" className='h-[50px] w-[50px] text-center'>
-  < PhoneIcon className="m-auto mt-3 h-[24px] w-[24px] text-black transition duration-75 hover:scale-125" />
+          <a href="tel:+1 (347) 240-5913" className='h-[50px] w-[50px] bg-zinc-50/30 backdrop-blur-sm rounded-full p-6 transition duration-75 hover:scale-125'>
+  < PhoneIcon className="h-[24px] w-[24px] -mt-3 -ml-3 text-zinc-950" />
           </a>
     </div>
    </>

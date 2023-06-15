@@ -1,7 +1,7 @@
 'use client';
 
 import { Menu } from "@headlessui/react";
-import { motion } from "framer-motion";
+import { motion, spring } from "framer-motion";
 import { Bars3Icon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 
@@ -14,8 +14,8 @@ return (             <div className="relative">
                           <> 
                           <motion.div  
                           whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-                            <Menu.Button className="hover:text-orange-200 text-wadadli rounded-xl bg-zinc-50/70 p-2 shadow-lg shadow-zinc-950/75 transition duration-300 ease-in-out hover:bg-zinc-950/90 hover:shadow-md focus:text-wadadli focus:outline-none">
-                            <Bars3Icon className="h-6 w-6" />
+                            <Menu.Button className="hover:text-orange-200 text-wadadli rounded-xl bg-zinc-50/70 backdrop-blur-sm p-2 shadow-lg shadow-zinc-950/75 transition duration-300 ease-in-out hover:bg-zinc-950/90 hover:shadow-md focus:text-wadadli focus:outline-none">
+                            <Bars3Icon className="h-5 w-5" />
                             </Menu.Button>
                             </motion.div>
     
@@ -24,32 +24,32 @@ return (             <div className="relative">
                                 as={motion.div}
                                 static
                                 initial={{ height: 0, opacity: 0 }}
-                                animate={{ height: "auto", opacity: 1 }}
+                                animate={{ height: "auto", opacity: 1, transition: {type: "spring", duration: .66, bounce: 0.33}}}
                                 
                                 transition={{ duration: 0.09 }}
-                                className="absolute right-0 z-10 mt-2 rounded-xl border border-orange-200 bg-zinc-50/90 font-semibold text-wadadli shadow focus:outline-none"
+                                className="absolute right-0 z-10 mt-2 rounded-xl border border-orange-200 bg-zinc-950/90 font-semibold text-orange-100 shadow focus:outline-none"
                               >
                                 <Menu.Item>
                                   {({ active }) => (
                                     <Link
                                       className={`${
-                                        active ? "rounded-t-xl bg-zinc-950 text-orange-100 transition duration-300 ease-in-out" : ""
+                                        active ? "rounded-t-xl bg-zinc-950 text-wadadli transition duration-300 ease-in-out" : ""
                                       } block whitespace-nowrap px-5 py-3`}
                                       href="/"
                                     >
-                                    Menu
+                                    menu
                                     </Link>
                                   )}
                                 </Menu.Item>
-                                <Menu.Item>
+                                {/* <Menu.Item>
                                   {({ active }) => (
                                     <a
                                       className={`${
-                                        active ? "bg-zinc-950 text-orange-100 transition duration-300 ease-in-out" : ""
+                                        active ? "bg-zinc-950 text-wadadli transition duration-300 ease-in-out" : ""
                                       } block whitespace-nowrap px-5 py-3`}
                                       href="#"
                                     >
-                                      Catering
+                                      catering
                                     </a>
                                   )}
                                 </Menu.Item>
@@ -57,11 +57,11 @@ return (             <div className="relative">
                                   {({ active }) => (
                                     <a
                                       className={`${
-                                        active ? "bg-zinc-950 text-orange-100 transition duration-300 ease-in-out" : ""
+                                        active ? "bg-zinc-950 text-wadadli transition duration-300 ease-in-out" : ""
                                       } block whitespace-nowrap px-5 py-3`}
                                       href="#"
                                     >
-                                      Private Events
+                                      private events
                                     </a>
                                   )}
                                 </Menu.Item>
@@ -69,38 +69,38 @@ return (             <div className="relative">
                                   {({ active }) => (
                                     <a
                                       className={`${
-                                        active ? "bg-zinc-950 text-orange-100 transition duration-300 ease-in-out" : ""
+                                        active ? "bg-zinc-950 text-wadadli transition duration-300 ease-in-out" : ""
                                       } block whitespace-nowrap px-5 py-3`}
                                       href="/gallery"
                                     >
-                                      Gallery
+                                      gallery
                                     </a>
                                   )}
-                                </Menu.Item>
+                                </Menu.Item> */}
                                 <Menu.Item>
                                   {({ active }) => (
                                     <Link
                                       className={`${
-                                        active ? " bg-zinc-950 text-orange-100 transition duration-300 ease-in-out" : ""
-                                      } block whitespace-nowrap px-5 py-3`}
+                                        active ? " bg-zinc-950 text-wadadli transition duration-300 ease-in-out" : ""
+                                      } block whitespace-nowrap px-5 py-3 rounded-b-xl`}
                                       href="/contact"
                                     >
-                                      Contact Us
+                                      contact us
                                     </Link>
                                   )}
                                 </Menu.Item>
-                                <Menu.Item>
+                                {/* <Menu.Item>
                                   {({ active }) => (
                                     <a
                                       className={`${
-                                        active ? "rounded-b-xl bg-zinc-950 text-orange-100 transition duration-300 ease-in-out" : ""
+                                        active ? "rounded-b-xl bg-zinc-950 text-wadadli transition duration-300 ease-in-out" : ""
                                       } block whitespace-nowrap px-5 py-3`}
                                       href="#"
                                     >
-                                      Our Story
+                                      our story
                                     </a>
                                   )}
-                                </Menu.Item>
+                                </Menu.Item> */}
                               </Menu.Items>
                             )}
                           </>
