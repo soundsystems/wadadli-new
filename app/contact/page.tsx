@@ -62,73 +62,73 @@ const mapsLink = isMobileDevice()
     const Contact: NextPage = () => {
       return (
         <>
-          <Header/>          
-          <div className="flex flex-col items-center justify-center scrollbar-none"> 
-            <div className="w-full">
+        <header id='top'>
+          <Header/>    
+        </header>      
+          <div className="scrollbar-none flex flex-col items-center justify-center"> 
+            <div className="w-full snap-normal">
               {/* <div className="flex flex-col place-items-center justify-center space-x-3 md:flex-row-reverse"> */}
-                <div className="mx-auto w-full max-w-7xl">
-                  <div className="my-auto flex flex-col place-items-center justify-center space-x-3 md:flex-row-reverse">
+                <div className="mx-auto md:max-w-5xl lg:max-w-7xl">
+                  <div className="my-auto flex flex-col place-items-center justify-center md:flex-row-reverse">
                     {/* Location Info */}
-                    <div className="pb-6 md:flex md:w-1/2 md:justify-center">
-                      <div className="inline-block rounded-xl border bg-zinc-50/60 p-2 text-left">
-                        <div className="rounded-xl bg-zinc-50 p-4">
-                          <div className="flex flex-col items-start">
-                            <div className="font-semibold text-zinc-950">Location:</div>
+                    <div className="w-5/6 md:w-1/2 md:px-8" id='location'>
+                    <div className="rounded-xl border bg-zinc-50/60 text-left backdrop-blur-sm">
+                        <div className="m-2 rounded-xl bg-zinc-50 p-4">
+                          <div className="flex flex-col items-center text-center">
+                          <h3 className="text-center text-sm font-bold text-zinc-950 md:text-lg">Wadadli Jerk & Wadadli AM</h3>
+                        {/* addy */}
                             <address className="mb-2">
                               <a
-                                className="text-sm font-bold text-wadadli transition-colors hover:text-zinc-950"
+                                className="text-sm font-bold text-wadadli transition-colors hover:text-zinc-950 md:text-base lg:text-lg"
                                 href={mapsLink}
                               >
                                 419 Putnam Ave
                                 <br />
                                 Brooklyn, NY 11216
                                 <br />
-                                {/* Tompkins Ave & Marcy Ave<br />
+                                {/* Tompkins Ave & Marcy Ave <br />
                             Bedford Stuyvesant */}
                               </a>
                             </address>
-                            <div>
-                              <div className="font-semibold text-zinc-950">Phone Number:</div>
+                            {/* phone */}
                               <a
-                                className="text-sm font-bold text-wadadli transition-colors hover:text-zinc-950"
+                                className="text-xs font-semibold text-wadadli transition-colors hover:text-zinc-950 md:text-sm"
                                 href="+1 (347) 240-5913"
                               >
                                 +1 (347) 240-5913
                               </a>
-                            </div>
-                            <div className="mt-2">
-                              <div className="font-semibold text-zinc-950">Email:</div>
+                              {/* email */}
                               <a
-                                className="text-sm font-bold text-wadadli transition-colors hover:text-zinc-950"
+                                className="text-xs font-semibold text-wadadli transition-colors hover:text-zinc-950 md:text-sm"
                                 href="mailto:wadadlijerk@gmail.com"
                               >
                                 wadadlijerk@gmail.com
                               </a>
-                              <div className="mt-2 text-zinc-950">
-                              <div className="font-semibold text-zinc-950">Hours:</div>
-                              <div className='text-wadadli inline-block'>Tue:</div> 11am-7pm
-                              <div className='text-wadadli inline-block pl-1'>Wed:</div> 11am-7pm
-                              <br className='md:hidden'/>
-                              <div className='text-wadadli inline-block md:pl-1'>Thu:</div> 11am-9pm
-                              <br className='hidden md:inline'/>
-                              <div className='text-wadadli inline-block pl-1 md:pl-0'>Fri:</div> 11am-9pm
-                              <br className='md:hidden'/>
-                              <div className='text-wadadli inline-block md:pl-1'>Sat:</div> 11am-9pm
-                              <div className='text-wadadli inline-block pl-1'>Sun:</div> 11am-7pm
                               </div>
-                            </div>
+                              {/* hours */}
+                              <ol className="mt-2 text-xs text-zinc-950 md:text-sm lg:text-base">
+                              <h3 className="text-sm font-medium text-zinc-950 md:text-lg">Hours</h3>
+                              <li className='inline-block text-wadadli'>Mon: </li> Closed
+                              <br/>
+                              <li> <span className='inline-block text-wadadli'>Tue - Wed: </span> 2:00pm - 9:00pm </li>
+                              <li> <span className='inline-block text-wadadli'>Thu - Sun: </span> 11:00am - 9:00pm </li> 
+                              
+                              <div className='mt-2'>
+                              <li> <span className='text-wadadli'>Breakfast/Brunch: </span> 11:00am - 4:00pm </li>
+                              <li> <span className='text-wadadli'>Lunch: </span> 11:00am - 9:00pm </li>
+                              </div>
+                              </ol>
                           </div>
                         </div>
-                      </div>
                     </div>
                     {/* Map */}
-                      <div className="h-full w-full snap-start overflow-hidden pb-6 px-4 md:pb-11 md:w-1/2">
+                      <div className="h-full w-5/6 overflow-hidden py-4 md:w-1/2 md:p-8">
                         <Map />
                       </div>
                   </div>
                 </div>
               {/* </div> */}
-              <div className='w-full px-1'>
+              <div className='w-full' id='contact-form' >
               <ContactForm />
               </div>
             </div>

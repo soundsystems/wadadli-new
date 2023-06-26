@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import OrderNowButton from "./OrderNowButton";
-import Dropdown from "./Dropdown";
+import Dropdown from "./DropdownMenu";
 // import { usePathname } from 'next/navigation';
 
 export default function Header({ }) {
@@ -14,10 +14,10 @@ export default function Header({ }) {
 
   return (
     // <div className={`${isContactPage ? 'fixed' : 'sticky'} top-0 z-50 flex w-full max-w-full items-center justify-between gap-x-2 p-6 text-center`}>
-    <div className='top-0 z-50 flex w-full max-w-full items-center justify-between gap-x-2 pr-3 pb-8 text-center'>
+    <div className='top-0 z-50 flex w-full max-w-full items-center justify-between gap-x-2 pb-8 pr-3 text-center'>
       <motion.div
         initial={{
-          x: -500,
+          x: 1000,
           opacity: 0,
           scale: 0.5,
         }}
@@ -27,12 +27,15 @@ export default function Header({ }) {
           scale: 1,
         }}
         transition={{
-          duration: .4,
+          type: "spring",
+          duration: .08,
+          stiffness: 69
         }}
+        whileHover={{ scale: 1.2}} whileTap={{ scale: 0.9 }} 
         className="flex flex-row"
       >
   <Link href="#menu">
-  <Image src='/logo.png' alt="Wadadli Jerk Logo" width='200' height='200' priority className="w-[4.5rem] lg:w-24 md:w-20 transition duration-75 hover:scale-125" />
+  <Image src='/logo.png' alt="Wadadli Jerk Logo" width='200' height='200' priority className="w-[4.5rem] mt-2 ml-1 md:w-20 lg:w-24" />
   </Link>
       </motion.div>
 
@@ -48,7 +51,9 @@ export default function Header({ }) {
           scale: 1,
         }}
         transition={{
-          duration: .4,
+          type: "spring",
+          duration: .24,
+          stiffness: 66,
         }}
         className="flex cursor-pointer transition duration-75 hover:scale-110"
       >

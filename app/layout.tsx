@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import { Unbounded } from 'next/font/google'
 
 
 <link rel="manifest" href="/site.webmanifest" />
@@ -14,6 +15,11 @@ export const metadata = {
 }
 ;
 
+const unbounded = Unbounded({
+  subsets: ['latin'],
+  display: 'swap',
+});
+ 
 export default function RootLayout({
     // Layouts must accept a children prop.
     // This will be populated with nested layouts or pages
@@ -22,8 +28,8 @@ export default function RootLayout({
     children: React.ReactNode;
   }) {
     return (
-      <html lang="en">
-<body className="">
+      <html lang="en" className={unbounded.className}>
+<body className="snap-start">
 <main>
      {children}
 </main>

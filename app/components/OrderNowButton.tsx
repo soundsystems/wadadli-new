@@ -11,8 +11,8 @@ const OrderNowButton = (props: Props) => {
       <span className="pr-2">
       <TruckIcon className="h-6 w-8 pl-2 text-wadadli transition duration-300 group-hover:text-orange-100" />
       </span>
-      <span className="px-2 font-semibold text-wadadli transition duration-300 group-hover:text-orange-100 md:inline-flex">
-        order now
+      <span className="px-2 font-semibold text-sm text-wadadli transition duration-300 group-hover:text-orange-100 md:inline-flex">
+        Order Now
       </span>
     </button>
   </Link>

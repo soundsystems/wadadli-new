@@ -1,8 +1,8 @@
-import { ArrowRightIcon } from "@heroicons/react/20/solid";
+import { ArrowRightCircleIcon } from "@heroicons/react/24/outline";
 import { useFormFields, useMailChimpForm } from "use-mailchimp-form";
-import { useState } from "react";
-import Lottie from "lottie-react";
-// import loadingSpinner from "/animations/loading-spinner.json";
+// import Lottie from "lottie-react";
+import { motion } from 'framer-motion';
+// import animationData from "./assets/progress-bar.json";
 
 export default function Subscribe() {
   const url = process.env.NEXT_PUBLIC_MAILCHIMP_URL as string;
@@ -27,11 +27,8 @@ export default function Subscribe() {
   // }, [success, error, message]);
 
   return (
-    <div className="flex justify-center">
+    <div className="mt-2 flex justify-center">
     <div className="mx-auto my-6">
-      <h1 className="text-2xl font-bold text-center text-wadadli">
-        join the family
-      </h1>
       <form
   onSubmit={(event) => {
     event.preventDefault();
@@ -41,49 +38,61 @@ export default function Subscribe() {
   }}
 >
         
-<button
+<motion.button
   type="submit"
-  className="group relative inline-flex w-full items-center justify-center divide-x divide-wadadli overflow-hidden whitespace-nowrap rounded-xl bg-zinc-50/70 backdrop-blur-sm py-2 shadow-lg shadow-zinc-950/75 transition duration-500 hover:divide-orange-100 hover:bg-zinc-950/90 hover:shadow-md sm:w-56 sm:px-44 sm:py-2 md:w-96"
+  className="group relative mx-auto mt-4 inline-flex w-full place-content-center place-items-baseline items-center divide-wadadli whitespace-nowrap rounded-xl bg-zinc-50/70 px-4 pb-5 pt-8 shadow-lg shadow-zinc-950/75 backdrop-blur-sm transition duration-500 hover:divide-orange-100 hover:bg-zinc-950/90 hover:shadow-md focus:shadow-sm focus:shadow-wadadli/80 focus:outline-none"
   disabled={success}
->
+  whileHover={{ scale: 1.1}} whileTap={{ scale: 0.9 }}>
+
+
   {!success ? (
-    <div className="leading-none">
-      <span className="inline-flex px-2 font-semibold text-wadadli transition duration-500 group-hover:text-orange-100 sm:text-sm md:text-lg lg:text-xl">
+    <div className="">
+      <span className="text-sm font-semibold text-wadadli transition duration-500 group-hover:text-orange-100 md:text-base">
         {loading ? (
           <>
-            {/* <Lottie animationData={loadingSpinner} style={{width: "24px", height: "24px"}}  loop  autoplay></Lottie> */}
+            {/* <Lottie animationData={animationData} style={{width: "24px", height: "24px"}}  loop  autoplay></Lottie> */}
             <span>submitting</span>
           </>
         ) : (
-          "subscribe"
+          "email"
         )}
       </span>
-      <span className="inline-flex px-2">
+      <span>
         {loading ? null : (
           <input
-            className="bg-transparent p-1 text-left text-sm font-bold text-wadadli placeholder:text-center placeholder:text-wadadli focus:border-transparent focus:outline-none focus:ring-2 focus:ring-wadadli"
+            className="mx-2 appearance-none bg-transparent px-2 py-1 text-left text-xs font-light text-wadadli ring-1 ring-wadadli placeholder:text-center placeholder:text-wadadli focus:border-transparent focus:outline-none focus:ring-2 focus:ring-orange-100" 
             id="EMAIL"
             autoFocus
             required
             type="email"
             value={fields.EMAIL}
             onChange={handleFieldChange}
-            placeholder="email"
+            placeholder=""
           />
         )}
       </span>
     </div>
   ) : (
-    <span className="inline-flex px-2 text-xs font-semibold uppercase text-wadadli transition duration-500 group-hover:text-orange-100 lg:text-lg">
+    <span className="text-xs font-semibold uppercase text-wadadli transition duration-500 group-hover:text-orange-100 lg:text-lg">
       {message}
     </span>
   )}
   {!success && (
-    <span className="ml-auto inline-flex px-2">
-      <ArrowRightIcon className="h-6 w-6 text-wadadli transition duration-500 group-hover:text-orange-100 md:stroke-2" />
-    </span>
+      <ArrowRightCircleIcon className="h-8 w-8 text-wadadli transition duration-500 group-hover:text-orange-100 md:stroke-2" />
   )}
-</button>
+  {!success && (   <motion.div
+        className="absolute top-0 appearance-none pl-4 pt-4 font-semibold text-zinc-950 opacity-0 transition-colors group-hover:text-wadadli"
+        animate={{ opacity: 1, y: -10 }}
+        transition={{   ease: "linear",
+        duration: .08,
+        x: { duration: .08 }}}
+        style={{ pointerEvents: 'none' }}
+        whileHover={{}}>
+      <h3 className="">
+      Join the Family
+      </h3>
+      </motion.div>)}
+</motion.button>
 
         <div className="mt-2 w-auto text-center text-zinc-950">
           {error && <span>{message}</span>}

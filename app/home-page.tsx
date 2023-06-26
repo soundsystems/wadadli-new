@@ -30,7 +30,7 @@ export default function HomePage() {
         <Header />
         </header>
         {/* Hero */}
-        <section id="menu" className="flex h-full snap-start flex-col items-center scrollbar-none">
+        <section id="menu" className="scrollbar-none flex h-full flex-col items-center">
            {/* <Map /> */}
           <Image src={menu} alt="Wadadli Jerk Menu" height={2000} width={1000}/>
         </section>

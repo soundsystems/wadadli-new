@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
 import { Dialog } from '@headlessui/react';
+import {EnvelopeIcon} from "@heroicons/react/20/solid";
 
 interface FormData {
   firstName: string;
@@ -39,12 +40,12 @@ const ContactForm = () => {
      <p>Your message has been sent. We will get back to you shortly.</p> */}
     </div>
   ) : (
-    <form onSubmit={handleSubmit(onSubmit)} className="mx-auto w-full max-w-lg rounded-lg bg-zinc-50/60 p-4">
+    <form onSubmit={handleSubmit(onSubmit)} className="mx-auto w-5/6 max-w-lg rounded-lg bg-zinc-50/60 p-4 backdrop-blur-md">
        <div className="rounded-xl p-4">
-        <h2 className="mb-4 text-center text-xl font-bold text-zinc-900">Contact Us</h2>
+        <h2 className="mb-4 text-center text-xl font-bold text-zinc-950">Contact Us</h2>
         <div className="mb-4 flex flex-wrap">
 <div className="mb-4 w-full md:mb-0 md:w-1/2 md:pr-1">
-  <label htmlFor="firstName" className="mb-2 block text-left text-sm font-semibold text-zinc-950">
+  <label htmlFor="firstName" className="mb-2 block text-left text-sm font-medium text-zinc-950">
     First Name
   </label>
   <motion.input
@@ -55,13 +56,13 @@ const ContactForm = () => {
     onBlur={() => {}}
     type="text"
     id="firstName"
-    className="w-full appearance-none rounded border bg-zinc-50 px-3 py-2 leading-tight text-gray-700 shadow outline outline-wadadli focus:shadow-wadadli focus:outline-none"
+    className="w-full appearance-none rounded border bg-zinc-50 px-3 py-2 text-xs font-light leading-tight text-gray-700 shadow outline outline-wadadli focus:shadow-wadadli/80 focus:outline-none"
     placeholder="First Name"
   />
   {formState.errors.firstName && <span className="text-xs text-red-500">This field is required</span>}
 </div>
 <div className="w-full md:w-1/2 md:pl-1">
-  <label htmlFor="lastName" className="mb-2 block text-left text-sm font-semibold text-zinc-900 md:text-right">
+  <label htmlFor="lastName" className="mb-2 block text-left text-sm font-medium text-zinc-900 md:text-right">
     Last Name
   </label>
   <motion.input
@@ -72,14 +73,14 @@ const ContactForm = () => {
     onBlur={() => {}}
     type="text"
     id="lastName"
-    className="w-full appearance-none rounded border bg-zinc-50 px-3 py-2 leading-tight text-gray-700 shadow outline outline-wadadli focus:shadow-wadadli focus:outline-none"
+    className="w-full appearance-none rounded border bg-zinc-50 px-3 py-2 text-xs font-light leading-tight text-gray-700 shadow outline outline-wadadli focus:shadow-wadadli/80 focus:outline-none"
     placeholder="Last Name"
   />
   {formState.errors.lastName && <span className="text-xs text-red-500">This field is required</span>}
 </div>
 </div>
 <div className="mb-4">
-<label htmlFor="email" className="mb-2 block text-sm font-semibold text-zinc-950">
+<label htmlFor="email" className="mb-2 block text-sm font-medium text-zinc-950">
   Email
 </label>
 <motion.input
@@ -90,13 +91,13 @@ const ContactForm = () => {
   onBlur={() => {}}
   type="email"
   id="email"
-  className="w-full appearance-none rounded border bg-zinc-50 px-3 py-2 leading-tight text-gray-700 shadow outline outline-wadadli focus:shadow-wadadli focus:outline-none"
+  className="w-full appearance-none rounded border bg-zinc-50 px-3 py-2 text-xs font-light leading-tight text-gray-700 shadow outline outline-wadadli focus:shadow-wadadli/80 focus:outline-none"
   placeholder="Email"
 />
 {formState.errors.email && <span className="text-xs text-red-500">Please enter a valid email address</span>}
 </div>
 <div className="mb-4">
-<label htmlFor="message" className="mb-2 block text-sm font-semibold">
+<label htmlFor="message" className="mb-2 block text-sm font-medium">
   Message
 </label>
 <motion.textarea
@@ -106,15 +107,17 @@ const ContactForm = () => {
   whileFocus="focused"
   onBlur={() => {}}
   id="message"
-  className="w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow outline outline-wadadli focus:shadow-wadadli focus:outline-none"
+  className="w-full appearance-none rounded border px-3 py-2 text-xs font-light leading-tight text-gray-700 shadow outline outline-wadadli focus:shadow-wadadli/80 focus:outline-none"
   placeholder="Message"
   rows={4}
 ></motion.textarea>
 {formState.errors.message && <span className="text-xs text-red-500">Please enter a message</span>}
 </div>
-        <button type="submit" className="w-full rounded-xl bg-zinc-50 px-4 py-2 font-semibold text-wadadli shadow-lg shadow-zinc-950/75 transition duration-500 hover:divide-orange-100 hover:bg-zinc-950/90 hover:text-orange-100 hover:shadow-md focus:border-none focus:shadow-wadadli">
-          send message
+        <div className="flex items-center justify-center">
+        <button type="submit" className="w-12 rounded-xl bg-zinc-50 p-3 italic text-wadadli shadow-md shadow-zinc-950/75 transition duration-500 hover:divide-orange-100 hover:bg-zinc-950/90 hover:text-orange-100 hover:shadow-md focus:border-none focus:shadow-md focus:shadow-wadadli/40">
+        <EnvelopeIcon className='h-6 w-6'/>
         </button>
+        </div>
         </div>
         </form>
   )}
