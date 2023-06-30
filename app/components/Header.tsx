@@ -35,7 +35,7 @@ export default function Header({ }) {
         className="flex flex-row"
       >
   <Link href="#menu">
-  <Image src='/logo.png' alt="Wadadli Jerk Logo" width='200' height='200' priority className="w-[4.5rem] mt-2 ml-1 md:w-20 lg:w-24" />
+  <Image src='/logo.png' alt="Wadadli Jerk Logo" width='200' height='200' priority className="ml-1 mt-2 w-[4.5rem] md:w-20 lg:w-24" />
   </Link>
       </motion.div>
 

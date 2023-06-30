@@ -1,3 +1,4 @@
+/* eslint-disable tailwindcss/no-custom-classname */
 'use client';
 
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
@@ -48,6 +49,7 @@ let margin = 11;
   return (
     <>
     <Header/>
+    <main>
     <MotionConfig transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1] }}>
       <div className="scrollbar-none h-full pt-40
       ">
@@ -153,6 +155,7 @@ let margin = 11;
         </div>
       </div>
     </MotionConfig>
+    </main>
     <Footer/>
     </>
   );

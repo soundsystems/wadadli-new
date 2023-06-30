@@ -3,15 +3,12 @@
 @tailwind utilities;
 
 @layer components {
-    .heroButton {
-        @apply bg-gradient-to-b from-slate-900 to-zinc-900 mx-3 px-6 py-3 mt-3 border-4 border-double border-amber-800 rounded-full uppercase text-sm tracking-widest text-teal-400 transition-all hover:border-emerald-500 hover:text-emerald-600;
-    }
 }
     .gallery {
         @apply bg-slate-800;
     }
 
-body { 
+.background { 
         background-position: center center;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -20,19 +17,19 @@ body {
 }
 
 @media (max-width: 480px) {
-            body {
+            .background {
                 background-image: url(../public/bg.webp);
             }
         }
         
         @media (min-width: 481px) and (max-width: 1024px) {
-            body {
+            .background {
                 background-image: url(../public/bg.webp);
             }
         }
         
         @media (min-width: 1025px) {
-            body {
+            .background {
                 background-image: url(../public/bg.webp);
             }
         }

@@ -14,11 +14,11 @@ function Footer({}: Props) {
     <div className='mx-auto flex flex-col'>
 <Subscribe/>
     </div>
-   <motion.div  whileHover={{ scale: 1.05}} className="flex justify-between px-6 md:px-20 py-5">
+   <motion.div className="flex justify-between px-6 py-5 md:px-20">
         <motion.div
-        whileTap={{ scale: 0.66 }}>
+        whileTap={{ scale: 0.66 }} whileHover={{ scale: 1.3}}>
         <SocialIcon
-          className="rounded-full backdrop-blur-sm transition duration-75 hover:scale-125"
+          className="rounded-full backdrop-blur-sm transition-colors duration-200 ease-linear hover:bg-zinc-50/70 "
           url="https://www.facebook.com/WadadliJerkpage/"
           fgColor="rgba(10, 10, 10, 1.0)"
           // bgColor="transparent"
@@ -26,9 +26,9 @@ function Footer({}: Props) {
         />
         </motion.div>
         <motion.div
-        whileTap={{ scale: 0.66 }}>
+        whileTap={{ scale: 0.66 }} whileHover={{ scale: 1.3}}>
         <SocialIcon
-          className="transition duration-75 hover:scale-125"
+          className="rounded-full backdrop-blur-sm transition-colors duration-200 ease-linear hover:bg-zinc-50/70"
           url="https://www.instagram.com/wadadlijerk/?hl=en"
           fgColor= "rgba(10, 10, 10, 1.0)"
           // bgColor="transparent"
@@ -36,9 +36,9 @@ function Footer({}: Props) {
         />
         </motion.div>
         <motion.div
-        whileTap={{ scale: 0.66}}>
+        whileTap={{ scale: 0.66}} whileHover={{ scale: 1.3}}>
         <SocialIcon
-          className="rounded-full backdrop-blur-sm transition duration-75 hover:scale-125"
+          className="rounded-full backdrop-blur-sm transition-colors duration-200 ease-linear hover:bg-zinc-50/70"
           url="mailto:wadadlijerk@gmail.com"
           fgColor="rgba(10, 10, 10, 1.0)"
           // bgColor="transparent"
@@ -51,8 +51,8 @@ function Footer({}: Props) {
           url="tel:13472405913"
           fgColor="black"
           bgColor="rgba(255, 255, 255, 0.440)" />*/}
-          <motion.a href="tel:+1 (347) 240-5913" className='h-[50px] w-[50px] rounded-full bg-zinc-50/30 p-6 backdrop-blur-sm transition duration-75 hover:scale-125'
-                    whileTap={{scale: .66}}>
+          <motion.a href="tel:+1 (347) 240-5913" className='h-[50px] w-[50px] rounded-full bg-zinc-50/30 p-6 backdrop-blur-sm transition-colors duration-200 ease-linear hover:bg-zinc-50/70'
+                    whileTap={{scale: .66}} whileHover={{ scale: 1.3}}>
   < PhoneIcon className="-ml-3 -mt-3 h-[24px] w-[24px] text-zinc-950" />
           </motion.a>
     </motion.div>

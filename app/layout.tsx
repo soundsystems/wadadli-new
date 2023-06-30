@@ -29,11 +29,8 @@ export default function RootLayout({
   }) {
     return (
       <html lang="en" className={unbounded.className}>
-<body className="snap-start">
-<main>
+<body className='background'>
      {children}
-</main>
-        {/* Footer */}
 </body>
       </html>
     );

@@ -1,5 +1,5 @@
 'use client';
-
+/* eslint-disable tailwindcss/no-custom-classname */
 // This is a Client Component. It receives data as props and
 // has access to state and effects just like Page components
 // in the `pages` directory.
@@ -27,7 +27,7 @@ export default function HomePage() {
         className="pointer-events-none z-0 h-screen w-screen object-cover object-center"/> */}
         {/* Header TODO: make sticky */}
         <header>
-        <Header />
+        <Header/>
         </header>
         {/* Hero */}
         <section id="menu" className="scrollbar-none flex h-full flex-col items-center">

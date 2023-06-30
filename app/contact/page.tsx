@@ -1,3 +1,4 @@
+/* eslint-disable tailwindcss/no-custom-classname */
 'use client'
 
 import type { NextPage } from 'next';
@@ -65,6 +66,7 @@ const mapsLink = isMobileDevice()
         <header id='top'>
           <Header/>    
         </header>      
+        <main>
           <div className="scrollbar-none flex flex-col items-center justify-center"> 
             <div className="w-full snap-normal">
               {/* <div className="flex flex-col place-items-center justify-center space-x-3 md:flex-row-reverse"> */}
@@ -79,7 +81,7 @@ const mapsLink = isMobileDevice()
                         {/* addy */}
                             <address className="mb-2">
                               <a
-                                className="text-sm font-bold text-wadadli transition-colors hover:text-zinc-950 md:text-base lg:text-lg"
+                                className="text-sm font-bold text-wadadli transition-colors duration-200 ease-linear hover:text-zinc-950 md:text-base lg:text-lg"
                                 href={mapsLink}
                               >
                                 419 Putnam Ave
@@ -92,14 +94,14 @@ const mapsLink = isMobileDevice()
                             </address>
                             {/* phone */}
                               <a
-                                className="text-xs font-semibold text-wadadli transition-colors hover:text-zinc-950 md:text-sm"
+                                className="text-xs font-semibold text-wadadli transition-colors duration-200 ease-linear hover:text-zinc-950 md:text-sm"
                                 href="+1 (347) 240-5913"
                               >
                                 +1 (347) 240-5913
                               </a>
                               {/* email */}
                               <a
-                                className="text-xs font-semibold text-wadadli transition-colors hover:text-zinc-950 md:text-sm"
+                                className="text-xs font-semibold text-wadadli transition-colors duration-200 ease-linear hover:text-zinc-950 md:text-sm"
                                 href="mailto:wadadlijerk@gmail.com"
                               >
                                 wadadlijerk@gmail.com
@@ -133,6 +135,7 @@ const mapsLink = isMobileDevice()
               </div>
             </div>
           </div>
+        </main>
           <Footer />
         </>
       );

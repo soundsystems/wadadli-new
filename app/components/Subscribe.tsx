@@ -40,14 +40,14 @@ export default function Subscribe() {
         
 <motion.button
   type="submit"
-  className="group relative mx-auto mt-4 inline-flex w-full place-content-center place-items-baseline items-center divide-wadadli whitespace-nowrap rounded-xl bg-zinc-50/70 px-4 pb-5 pt-8 shadow-lg shadow-zinc-950/75 backdrop-blur-sm transition duration-500 hover:divide-orange-100 hover:bg-zinc-950/90 hover:shadow-md focus:shadow-sm focus:shadow-wadadli/80 focus:outline-none"
+  className="group relative mx-auto mt-4 inline-flex w-full place-content-center place-items-baseline items-center divide-wadadli whitespace-nowrap rounded-xl bg-zinc-50/70 px-4 pb-5 pt-8 shadow-lg shadow-zinc-950/75 backdrop-blur-sm transition-colors duration-300 ease-linear focus-within:drop-shadow-xl hover:divide-orange-100 hover:bg-zinc-950/90 hover:drop-shadow-xl focus:outline-none"
   disabled={success}
   whileHover={{ scale: 1.1}} whileTap={{ scale: 0.9 }}>
 
 
   {!success ? (
     <div className="">
-      <span className="text-sm font-semibold text-wadadli transition duration-500 group-hover:text-orange-100 md:text-base">
+      <span className="text-sm font-semibold text-wadadli transition-colors duration-300 ease-linear group-hover:text-orange-100 md:text-base">
         {loading ? (
           <>
             {/* <Lottie animationData={animationData} style={{width: "24px", height: "24px"}}  loop  autoplay></Lottie> */}
@@ -73,19 +73,19 @@ export default function Subscribe() {
       </span>
     </div>
   ) : (
-    <span className="text-xs font-semibold uppercase text-wadadli transition duration-500 group-hover:text-orange-100 lg:text-lg">
+    <span className="text-xs font-semibold uppercase text-wadadli transition-colors duration-300 ease-linear group-hover:text-orange-100 lg:text-lg">
       {message}
     </span>
   )}
   {!success && (
-      <ArrowRightCircleIcon className="h-8 w-8 text-wadadli transition duration-500 group-hover:text-orange-100 md:stroke-2" />
+      <ArrowRightCircleIcon className="h-8 w-8 text-wadadli transition-colors duration-300 ease-linear group-hover:text-orange-100 md:stroke-2" />
   )}
   {!success && (   <motion.div
-        className="absolute top-0 appearance-none pl-4 pt-4 font-semibold text-zinc-950 opacity-0 transition-colors group-hover:text-wadadli"
+        className="absolute top-0 appearance-none pl-4 pt-4 font-semibold text-zinc-950 opacity-0 transition-colors duration-300 ease-linear group-hover:text-wadadli"
         animate={{ opacity: 1, y: -10 }}
         transition={{   ease: "linear",
         duration: .08,
-        x: { duration: .08 }}}
+        x: { duration: .15 }}}
         style={{ pointerEvents: 'none' }}
         whileHover={{}}>
       <h3 className="">
