@@ -14,7 +14,7 @@ function Footer({}: Props) {
     <div className='mx-auto flex flex-col'>
 <Subscribe/>
     </div>
-   <motion.div className="flex justify-between px-6 py-5 md:px-20">
+   <motion.div className="flex justify-between px-6 py-5 pb-safe-bottom md:px-20">
         <motion.div
         whileTap={{ scale: 0.66 }} whileHover={{ scale: 1.3}}>
         <SocialIcon

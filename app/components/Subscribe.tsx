@@ -27,7 +27,7 @@ export default function Subscribe() {
   // }, [success, error, message]);
 
   return (
-    <div className="mt-2 flex justify-center">
+    <div className="flex justify-center">
     <div className="mx-auto my-6">
       <form
   onSubmit={(event) => {
@@ -40,7 +40,7 @@ export default function Subscribe() {
         
 <motion.button
   type="submit"
-  className="group relative mx-auto mt-4 inline-flex w-full place-content-center place-items-baseline items-center divide-wadadli whitespace-nowrap rounded-xl bg-zinc-50/70 px-4 pb-5 pt-8 shadow-lg shadow-zinc-950/75 backdrop-blur-sm transition-colors duration-300 ease-linear focus-within:drop-shadow-xl hover:divide-orange-100 hover:bg-zinc-950/90 hover:drop-shadow-xl focus:outline-none"
+  className="group relative ml-safe-left mr-safe-right mt-4 inline-flex w-full place-content-center place-items-baseline items-center divide-wadadli whitespace-nowrap rounded-xl bg-zinc-50/70 px-4 pb-5 pt-8 shadow-lg shadow-zinc-950/75 backdrop-blur-sm transition-colors duration-300 ease-linear focus-within:drop-shadow-xl hover:divide-orange-100 hover:bg-zinc-950/90 hover:drop-shadow-xl focus:outline-none"
   disabled={success}
   whileHover={{ scale: 1.1}} whileTap={{ scale: 0.9 }}>
 
@@ -60,9 +60,8 @@ export default function Subscribe() {
       <span>
         {loading ? null : (
           <input
-            className="mx-2 appearance-none bg-transparent px-2 py-1 text-left text-xs font-light text-wadadli ring-1 ring-wadadli placeholder:text-center placeholder:text-wadadli focus:border-transparent focus:outline-none focus:ring-2 focus:ring-orange-100" 
+            className="mx-2 appearance-none bg-transparent px-2 py-1 text-left text-[1rem] font-light text-wadadli ring-1 ring-wadadli placeholder:text-center placeholder:text-wadadli focus:border-transparent focus:outline-none focus:ring-2 focus:ring-orange-100" 
             id="EMAIL"
-            autoFocus
             required
             type="email"
             value={fields.EMAIL}

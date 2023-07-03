@@ -16,7 +16,6 @@ return (
     <Header/>   
     </header>       
     <main>
-    <div className="scrollbar-none"> 
     <div className="flex w-full flex-col items-center justify-center">
     <motion.div     
     initial={{ opacity: 0 }}
@@ -25,7 +24,8 @@ return (
     whileTap={{ scale: 0.6 }}
     whileHover={{ scale: 1.55 }}
     drag
-    dragElastic={0.2}
+    dragElastic={0.3}
+    dragConstraints={{ top: 10, left: 0, right: 0, bottom: 20 }}
     style={{userSelect: "none"}} >
     <Image src={'/./Card.gif'} alt='spinning Wadadli logo card' width={500} height={500} unoptimized/>
     </motion.div>
@@ -37,7 +37,6 @@ return (
     whileHover={{ scale: 1.1 }}
     style={{userSelect: "none"}}
     className="text-center text-5xl font-bold text-zinc-950 transition-colors duration-300 ease-linear hover:text-wadadli">COMING SOON</motion.h2>
-    </div>
     </div>
     </main>
     <footer>

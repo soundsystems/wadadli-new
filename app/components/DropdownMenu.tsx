@@ -125,7 +125,7 @@ return (             <div className="relative">
                                       className={`${
                                         active ? " bg-zinc-950 text-wadadli transition-colors duration-300 ease-linear" : ""
                                       } block whitespace-nowrap rounded-b-xl px-5 py-3`}
-                                      href="/contact#top"
+                                      href="/contact"
                                     >
                                       Location
                                     </Link>

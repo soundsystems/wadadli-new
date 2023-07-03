@@ -1,5 +1,4 @@
 'use client';
-/* eslint-disable tailwindcss/no-custom-classname */
 // This is a Client Component. It receives data as props and
 // has access to state and effects just like Page components
 // in the `pages` directory.
@@ -10,6 +9,7 @@ import type { Metadata } from "next";
 import Header from "./components/Header";
 import Image from "next/image";
 import menu from "../public/menu.jpeg"
+import mobile from "../public/menu-mobile.png"
 import bgImage from "../public/bg.webp";
 import Footer from "./components/Footer";
 
@@ -25,16 +25,17 @@ export default function HomePage() {
         alt="background treasure map texture"
         fill
         className="pointer-events-none z-0 h-screen w-screen object-cover object-center"/> */}
-        {/* Header TODO: make sticky */}
         <header>
         <Header/>
         </header>
+        <main className="pt-safe-top">
         {/* Hero */}
-        <section id="menu" className="scrollbar-none flex h-full flex-col items-center">
+        <section id="menu" className="flex h-full flex-col items-center">
            {/* <Map /> */}
-          <Image src={menu} alt="Wadadli Jerk Menu" height={2000} width={1000}/>
+          <Image src={menu} alt="Wadadli Jerk Menu" height={2000} width={1000} className="md:rounded-3xl"/>
+          {/* <Image src={mobile} alt="Wadadli Jerk Menu" height={6551} width={1600} className="md:hidden"/> */}
         </section>
-
+        </main>
         <footer className="sticky">
         <Footer />
         </footer>

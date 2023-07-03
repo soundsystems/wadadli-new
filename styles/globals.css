@@ -16,6 +16,19 @@
         background-color: #D4A883;
 }
 
+@media screen and (max-width: 768px) { 
+    html {
+    scroll-behavior: smooth;
+    zoom:1;
+    transform-scale:1;
+    }
+    body {
+    overflow: hidden;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    }
+}
+
 @media (max-width: 480px) {
             .background {
                 background-image: url(../public/bg.webp);

@@ -1,4 +1,3 @@
-/* eslint-disable tailwindcss/no-custom-classname */
 'use client'
 
 import type { NextPage } from 'next';
@@ -63,12 +62,12 @@ const mapsLink = isMobileDevice()
     const Contact: NextPage = () => {
       return (
         <>
-        <header id='top'>
+        <header>
           <Header/>    
         </header>      
         <main>
-          <div className="scrollbar-none flex flex-col items-center justify-center"> 
-            <div className="w-full snap-normal">
+          <div className="flex flex-col items-center justify-center"> 
+            <div className="w-full">
               {/* <div className="flex flex-col place-items-center justify-center space-x-3 md:flex-row-reverse"> */}
                 <div className="mx-auto md:max-w-5xl lg:max-w-7xl">
                   <div className="my-auto flex flex-col place-items-center justify-center md:flex-row-reverse">
@@ -130,13 +129,15 @@ const mapsLink = isMobileDevice()
                   </div>
                 </div>
               {/* </div> */}
-              <div className='w-full' id='contact-form' >
+              <div id='contact-form' className='w-full'>
               <ContactForm />
               </div>
             </div>
           </div>
         </main>
+        <footer>
           <Footer />
+        </footer>
         </>
       );
     };

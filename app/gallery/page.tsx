@@ -1,4 +1,3 @@
-/* eslint-disable tailwindcss/no-custom-classname */
 'use client';
 
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
@@ -51,7 +50,7 @@ let margin = 11;
     <Header/>
     <main>
     <MotionConfig transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1] }}>
-      <div className="scrollbar-none h-full pt-40
+      <div className="h-full pt-40
       ">
         <div className="mx-auto flex max-w-7xl flex-col justify-center">
           <div className="relative overflow-hidden">

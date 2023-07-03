@@ -14,7 +14,7 @@ export default function Header({ }) {
 
   return (
     // <div className={`${isContactPage ? 'fixed' : 'sticky'} top-0 z-50 flex w-full max-w-full items-center justify-between gap-x-2 p-6 text-center`}>
-    <div className='top-0 z-50 flex w-full max-w-full items-center justify-between gap-x-2 pb-8 pr-3 text-center'>
+    <div className='top-0 z-50 flex h-full w-full max-w-full items-center justify-between gap-x-2 pb-5 pr-4 pt-safe-top text-center'>
       <motion.div
         initial={{
           x: 1000,
@@ -34,7 +34,7 @@ export default function Header({ }) {
         whileHover={{ scale: 1.2}} whileTap={{ scale: 0.9 }} 
         className="flex flex-row"
       >
-  <Link href="#menu">
+  <Link href="/">
   <Image src='/logo.png' alt="Wadadli Jerk Logo" width='200' height='200' priority className="ml-1 mt-2 w-[4.5rem] md:w-20 lg:w-24" />
   </Link>
       </motion.div>
