@@ -10,11 +10,11 @@ type Props = {}
 
 function Footer({}: Props) {
   return (
-    <>
+    <footer className='sticky pb-6'>
     <div className='mx-auto flex flex-col'>
 <Subscribe/>
     </div>
-   <motion.div className="flex justify-between px-6 py-5 pb-safe-bottom md:px-20">
+   <motion.div className="flex justify-between px-6 pb-safe-bottom pt-4 md:px-20">
         <motion.div
         whileTap={{ scale: 0.66 }} whileHover={{ scale: 1.3}}>
         <SocialIcon
@@ -56,7 +56,7 @@ function Footer({}: Props) {
   < PhoneIcon className="-ml-3 -mt-3 h-[24px] w-[24px] text-zinc-950" />
           </motion.a>
     </motion.div>
-   </>
+   </footer>
   )
 }
 

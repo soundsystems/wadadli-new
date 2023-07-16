@@ -7,12 +7,6 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
 
-interface MapProps extends React.PropsWithChildren<{}>{
-  defaultCenter: {
-    lat: number;
-    lng: number;
-  };
-}
 
 function Map() {
   const { isLoaded } = useLoadScript({
@@ -62,9 +56,7 @@ const mapsLink = isMobileDevice()
     const Contact: NextPage = () => {
       return (
         <>
-        <header>
-          <Header/>    
-        </header>      
+          <Header/>       
         <main>
           <div className="flex flex-col items-center justify-center"> 
             <div className="w-full">
@@ -135,9 +127,7 @@ const mapsLink = isMobileDevice()
             </div>
           </div>
         </main>
-        <footer>
           <Footer />
-        </footer>
         </>
       );
     };

@@ -12,9 +12,7 @@ const Shop: NextPage = () => {
 
 return (
     <>
-    <header>
-    <Header/>   
-    </header>       
+    <Header/>     
     <main>
     <div className="flex w-full flex-col items-center justify-center">
     <motion.div     
@@ -39,9 +37,7 @@ return (
     className="text-center text-5xl font-bold text-zinc-950 transition-colors duration-300 ease-linear hover:text-wadadli">COMING SOON</motion.h2>
     </div>
     </main>
-    <footer>
     <Footer/>
-    </footer>
     </>
     );
     }  

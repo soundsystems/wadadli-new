@@ -25,9 +25,7 @@ export default function HomePage() {
         alt="background treasure map texture"
         fill
         className="pointer-events-none z-0 h-screen w-screen object-cover object-center"/> */}
-        <header>
         <Header/>
-        </header>
         <main className="pt-safe-top">
         {/* Hero */}
         <section id="menu" className="flex h-full flex-col items-center">
@@ -36,9 +34,7 @@ export default function HomePage() {
           {/* <Image src={mobile} alt="Wadadli Jerk Menu" height={6551} width={1600} className="md:hidden"/> */}
         </section>
         </main>
-        <footer className="sticky">
         <Footer />
-        </footer>
 
         {/* <section id="gallery" className="h-screen snap-end">
           <Gallery />

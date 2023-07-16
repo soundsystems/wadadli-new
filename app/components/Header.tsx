@@ -14,7 +14,7 @@ export default function Header({ }) {
 
   return (
     // <div className={`${isContactPage ? 'fixed' : 'sticky'} top-0 z-50 flex w-full max-w-full items-center justify-between gap-x-2 p-6 text-center`}>
-    <div className='top-0 z-50 flex h-full w-full max-w-full items-center justify-between gap-x-2 pb-5 pr-4 pt-safe-top text-center'>
+    <header className='top-0 z-50 flex h-full w-full max-w-full items-center justify-between gap-x-2 pb-5 pr-4 pt-safe-top text-center'>
       <motion.div
         initial={{
           x: 1000,
@@ -60,6 +60,6 @@ export default function Header({ }) {
         <OrderNowButton />
         <Dropdown/>
       </motion.div>
-    </div>
+    </header>
   );
 }

@@ -1,8 +1,7 @@
 import { ArrowRightCircleIcon } from "@heroicons/react/24/outline";
 import { useFormFields, useMailChimpForm } from "use-mailchimp-form";
-// import Lottie from "lottie-react";
+import { SpinnerInfinity } from 'spinners-react';
 import { motion } from 'framer-motion';
-// import animationData from "./assets/progress-bar.json";
 
 export default function Subscribe() {
   const url = process.env.NEXT_PUBLIC_MAILCHIMP_URL as string;
@@ -40,7 +39,7 @@ export default function Subscribe() {
         
 <motion.button
   type="submit"
-  className="group relative ml-safe-left mr-safe-right mt-4 inline-flex w-full place-content-center place-items-baseline items-center divide-wadadli whitespace-nowrap rounded-xl bg-zinc-50/70 px-4 pb-5 pt-8 shadow-lg shadow-zinc-950/75 backdrop-blur-sm transition-colors duration-300 ease-linear focus-within:drop-shadow-xl hover:divide-orange-100 hover:bg-zinc-950/90 hover:drop-shadow-xl focus:outline-none"
+  className="group relative mx-auto mt-4 inline-flex w-auto place-content-center place-items-baseline items-center divide-wadadli whitespace-nowrap rounded-xl bg-zinc-50/70 px-4 pb-5 pt-8 shadow-lg shadow-zinc-950/75 backdrop-blur-sm transition-colors duration-300 ease-linear focus-within:drop-shadow-xl hover:divide-orange-100 hover:bg-zinc-950/90 hover:drop-shadow-xl focus:outline-none"
   disabled={success}
   whileHover={{ scale: 1.1}} whileTap={{ scale: 0.9 }}>
 
@@ -49,10 +48,7 @@ export default function Subscribe() {
     <div className="">
       <span className="text-sm font-semibold text-wadadli transition-colors duration-300 ease-linear group-hover:text-orange-100 md:text-base">
         {loading ? (
-          <>
-            {/* <Lottie animationData={animationData} style={{width: "24px", height: "24px"}}  loop  autoplay></Lottie> */}
-            <span>submitting</span>
-          </>
+            <SpinnerInfinity size={50} thickness={148} speed={140} color="rgba(253, 111, 0, 1)" secondaryColor="rgba(253, 111, 0, 0.08)" />
         ) : (
           "email"
         )}
@@ -77,7 +73,7 @@ export default function Subscribe() {
     </span>
   )}
   {!success && (
-      <ArrowRightCircleIcon className="h-8 w-8 text-wadadli transition-colors duration-300 ease-linear group-hover:text-orange-100 md:stroke-2" />
+      <ArrowRightCircleIcon className={`h-8 w-8 text-wadadli transition-colors duration-300 ease-linear group-hover:text-orange-100 md:stroke-2 ${loading ? 'hidden' : ''}`} />
   )}
   {!success && (   <motion.div
         className="absolute top-0 appearance-none pl-4 pt-4 font-semibold text-zinc-950 opacity-0 transition-colors duration-300 ease-linear group-hover:text-wadadli"
@@ -87,7 +83,7 @@ export default function Subscribe() {
         x: { duration: .15 }}}
         style={{ pointerEvents: 'none' }}
         whileHover={{}}>
-      <h3 className="">
+      <h3 className={`${loading ? 'hidden' : ''}`}>
       Join the Family
       </h3>
       </motion.div>)}
