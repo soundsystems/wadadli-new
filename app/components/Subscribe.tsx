@@ -39,10 +39,9 @@ export default function Subscribe() {
         
 <motion.button
   type="submit"
-  className="group relative mx-auto mt-4 inline-flex w-auto place-content-center place-items-baseline items-center divide-wadadli whitespace-nowrap rounded-xl bg-zinc-50/70 px-4 pb-5 pt-8 shadow-lg shadow-zinc-950/75 backdrop-blur-sm transition-colors duration-300 ease-linear focus-within:drop-shadow-xl hover:divide-orange-100 hover:bg-zinc-950/90 hover:drop-shadow-xl focus:outline-none"
+  className={`group relative mx-auto mt-4 inline-flex w-auto place-content-center place-items-baseline items-center divide-wadadli whitespace-nowrap rounded-xl bg-zinc-50/70 px-4 pb-5 pt-8 shadow-lg shadow-zinc-950/75 backdrop-blur-sm transition-colors duration-300 ease-linear focus-within:drop-shadow-xl hover:divide-orange-100 hover:bg-zinc-950/90 hover:drop-shadow-xl focus:outline-none ${error ? 'hidden' : ''}`}
   disabled={success}
   whileHover={{ scale: 1.1}} whileTap={{ scale: 0.9 }}>
-
 
   {!success ? (
     <div className="">
@@ -56,7 +55,7 @@ export default function Subscribe() {
       <span>
         {loading ? null : (
           <input
-            className="mx-2 appearance-none bg-transparent px-2 py-1 text-left text-[1rem] font-light text-wadadli ring-1 ring-wadadli placeholder:text-center placeholder:text-wadadli focus:border-transparent focus:outline-none focus:ring-2 focus:ring-orange-100" 
+            className="mx-2 w-48 appearance-none bg-transparent px-2 py-1 text-left text-[1rem] font-light text-wadadli ring-1 ring-wadadli placeholder:text-center placeholder:text-wadadli focus:border-transparent focus:outline-none focus:ring-2 focus:ring-orange-100 md:w-auto" 
             id="EMAIL"
             required
             type="email"
@@ -89,8 +88,8 @@ export default function Subscribe() {
       </motion.div>)}
 </motion.button>
 
-        <div className="mt-2 w-auto text-center text-zinc-950">
-          {error && <span>{message}</span>}
+        <div className="mx-auto mt-2 flex w-auto flex-wrap items-center text-center text-zinc-950">
+          {error && <span>Please toggle <br/> <span className="font-semibold">Turn Off Content Blockers</span> <br/> if using Safari on iOS</span>}
         </div>
       </form>
     </div>

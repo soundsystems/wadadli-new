@@ -25,7 +25,7 @@ return (
     dragElastic={0.3}
     dragConstraints={{ top: 10, left: 0, right: 0, bottom: 20 }}
     style={{userSelect: "none"}} >
-    <Image src={'/./Card.gif'} alt='spinning Wadadli logo card' width={500} height={500} unoptimized/>
+    <Image src={'/./Card2.gif'} alt='spinning Wadadli logo card' width={500} height={500} unoptimized/>
     </motion.div>
     <motion.h2
     initial={{ opacity: 0 }}
