@@ -23,10 +23,9 @@
     transform-scale:1;
     }
     body {
-    overflow: hidden;
-    touch-action: manipulation;
-    -webkit-tap-highlight-color: transparent;
-    }
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+        }
 }
 
 @media (max-width: 480px) {
