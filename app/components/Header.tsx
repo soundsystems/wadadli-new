@@ -14,7 +14,8 @@ export default function Header({ }) {
 
   return (
     // <div className={`${isContactPage ? 'fixed' : 'sticky'} top-0 z-50 flex w-full max-w-full items-center justify-between gap-x-2 p-6 text-center`}>
-    <header className='top-0 z-50 flex h-full w-full max-w-full items-center justify-between gap-x-2 pb-5 pr-4 pt-safe-top text-center'>
+    // eslint-disable-next-line tailwindcss/no-custom-classname
+    <header className='pt-safe-top top-0 z-50 flex h-full w-full max-w-full items-center justify-between gap-x-2 pb-5 pr-4 text-center'>
       <motion.div
         initial={{
           x: 1000,
@@ -29,9 +30,10 @@ export default function Header({ }) {
         transition={{
           type: "spring",
           duration: .08,
-          stiffness: 69
+          stiffness: 69,
         }}
-        whileHover={{ scale: 1.2}} whileTap={{ scale: 0.9 }} 
+        whileHover={{ scale: 1.2 }} 
+        whileTap={{ scale: 0.9 }} 
         className="flex flex-row"
       >
   <Link href="/">
@@ -40,7 +42,7 @@ export default function Header({ }) {
       </motion.div>
 
       <motion.div
-        initial={{
+        initial={{ 
           x: 500,
           opacity: 0,
           scale: 0.5,

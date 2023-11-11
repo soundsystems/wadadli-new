@@ -17,8 +17,8 @@ return (             <div className="relative">
                           whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}>
                             <Menu.Button className={`group rounded-xl bg-zinc-50/70 p-2 text-wadadli shadow-lg shadow-zinc-950/75 backdrop-blur-sm transition-colors duration-300 ease-linear hover:bg-zinc-950/90 hover:drop-shadow-xl focus:outline-none
                             ${open ? 'bg-zinc-950/90 stroke-orange-100 shadow-none drop-shadow-none' : ''
-                            }`}>
-                         
+                            }`}
+                            > 
                             <Bars3Icon className={`group h-5 w-5 group-hover:text-orange-100 ${open ? 'rotate-180 transition-transform duration-150 ease-linear' : '' 
                             }`} />
                             </Menu.Button>

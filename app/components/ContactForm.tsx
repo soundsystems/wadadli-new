@@ -1,3 +1,4 @@
+/* eslint-disable tailwindcss/no-custom-classname */
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
@@ -56,7 +57,7 @@ const ContactForm = () => {
     onBlur={() => {}}
     type="text"
     id="firstName"
-    className="w-full appearance-none rounded border bg-zinc-50 px-3 py-2 text-xs font-light leading-tight text-gray-700 shadow outline outline-wadadli/80 focus:shadow-wadadli/80 focus:outline-none"
+    className="outline-wadadli/80 focus:shadow-wadadli/80 w-full appearance-none rounded border bg-zinc-50 px-3 py-2 text-xs font-light leading-tight text-gray-700 shadow outline focus:outline-none"
     placeholder="First Name"
   />
   {formState.errors.firstName && <span className="text-xs text-red-500">This field is required</span>}
@@ -73,7 +74,7 @@ const ContactForm = () => {
     onBlur={() => {}}
     type="text"
     id="lastName"
-    className="w-full appearance-none rounded border bg-zinc-50 px-3 py-2 text-xs font-light leading-tight text-gray-700 shadow outline outline-wadadli/80 focus:shadow-wadadli/80 focus:outline-none"
+    className="outline-wadadli/80 focus:shadow-wadadli/80 w-full appearance-none rounded border bg-zinc-50 px-3 py-2 text-xs font-light leading-tight text-gray-700 shadow outline focus:outline-none"
     placeholder="Last Name"
   />
   {formState.errors.lastName && <span className="text-xs text-red-500">This field is required</span>}
@@ -91,7 +92,7 @@ const ContactForm = () => {
   onBlur={() => {}}
   type="email"
   id="email"
-  className="w-full appearance-none rounded border bg-zinc-50 px-3 py-2 text-xs font-light leading-tight text-gray-700 shadow outline outline-wadadli/80 focus:shadow-wadadli/80 focus:outline-none"
+  className="outline-wadadli/80 focus:shadow-wadadli/80 w-full appearance-none rounded border bg-zinc-50 px-3 py-2 text-xs font-light leading-tight text-gray-700 shadow outline focus:outline-none"
   placeholder="Email"
 />
 {formState.errors.email && <span className="text-xs text-red-500">Please enter a valid email address</span>}
@@ -107,14 +108,14 @@ const ContactForm = () => {
   whileFocus="focused"
   onBlur={() => {}}
   id="message"
-  className="w-full appearance-none rounded border px-3 py-2 text-xs font-light leading-tight text-gray-700 shadow outline outline-wadadli/80 focus:shadow-wadadli/80 focus:outline-none"
+  className="outline-wadadli/80 focus:shadow-wadadli/80 w-full appearance-none rounded border px-3 py-2 text-xs font-light leading-tight text-gray-700 shadow outline focus:outline-none"
   placeholder="Message"
   rows={4}
 ></motion.textarea>
 {formState.errors.message && <span className="text-xs text-red-500">Please enter a message</span>}
 </div>
         <div className="flex items-center justify-center">
-        <button type="submit" className="w-12 rounded-xl bg-zinc-50 p-3 italic text-wadadli shadow-lg shadow-zinc-950/75 transition-colors duration-300 ease-linear hover:divide-orange-100 hover:bg-zinc-950/90 hover:text-orange-100 hover:shadow-md focus:border-none focus:shadow-md focus:shadow-wadadli/40">
+        <button type="submit" className="text-wadadli focus:shadow-wadadli/40 w-12 rounded-xl bg-zinc-50 p-3 italic shadow-lg shadow-zinc-950/75 transition-colors duration-300 ease-linear hover:divide-orange-100 hover:bg-zinc-950/90 hover:text-orange-100 hover:shadow-md focus:border-none focus:shadow-md">
         <EnvelopeIcon className='h-6 w-6'/>
         </button>
         </div>
@@ -140,7 +141,7 @@ const ContactForm = () => {
             <div className="mt-4">
               <button
                 type="button"
-                className="inline-flex justify-center rounded-md border border-transparent bg-zinc-50/60 px-4 py-2 text-sm font-medium text-zinc-950 hover:bg-orange-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-wadadli focus-visible:ring-offset-2"
+                className="focus-visible:ring-wadadli inline-flex justify-center rounded-md border border-transparent bg-zinc-50/60 px-4 py-2 text-sm font-medium text-zinc-950 hover:bg-orange-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
                 onClick={closeModal}
               >
                 Close

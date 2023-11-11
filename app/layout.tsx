@@ -4,15 +4,31 @@ import { Unbounded } from 'next/font/google'
 
 <link rel="manifest" href="/site.webmanifest" />
 export const metadata = {
-  title: 'Welcome to Wadadli',
-  description: 'Wadadli Jerk is a family owned and operated business that specializes in authentic Jamaican Jerk cuisine. We are located in the heart of the Brooklyn, New York.',
+  title: {default: 'Wadadli Jerk',
+  template: '%s | Wadadli Jerk',
+},
+  description: 'Authentic Antiguan Jerk Cuisine made fresh in the heart of Brooklyn, NY',
 
-  icons: {
-    icon: "/_next/static/media/metadata/apple-touch-icon.png",
-    // icon: "/_next/static/media/metadata/favicon-32x32.png",
-    // icon: "/_next/static/media/metadata/favicon-16x16.png",
-  },
-// manifest: "/site.webmanifest",
+manifest: "/site.webmanifest",
+/* appleWebApp: {
+  title: 'Wadadli Jerk',
+  statusBarStyle: 'black-translucent',
+  startupImage: [
+    '/assets/startup/apple-touch-startup-image-768x1004.png',
+    {
+      url: '/assets/startup/apple-touch-startup-image-1536x2008.png',
+      media: '(device-width: 768px) and (device-height: 1024px)',
+    },
+  ],
+}, */
+verification: {
+  google: '5Oh5qsbuJLK9CLudPwoUuWGtz9elOE4T-qnup9H90Og',
+/*   yandex: 'yandex',
+  yahoo: 'yahoo',
+  other: {
+    me: ['my-email', 'my-link'],
+  }, */
+},
 }
 ;
 

@@ -1,7 +1,4 @@
 'use client';
-// This is a Client Component. It receives data as props and
-// has access to state and effects just like Page components
-// in the `pages` directory.
 
 import Map from "./components/Map";
 import dynamic from "next/dynamic";
