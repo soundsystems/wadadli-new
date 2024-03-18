@@ -46,7 +46,7 @@ function isIOSDevice() {
   }
   return /iPhone|iPad|iPod/i.test(navigator.userAgent);
 }
-
+ 
 const mapsLink = isMobileDevice()
   ? isIOSDevice()
     ? 'maps://maps.apple.com/?q=Wadadli+Jerk&daddr=40.68452871196172,-73.94436153324439'
@@ -66,13 +66,13 @@ const mapsLink = isMobileDevice()
                     {/* Location Info */}
                     <div className="w-5/6 md:w-1/2 md:px-8" id='location'>
                     <div className="rounded-xl border bg-zinc-50/60 text-left backdrop-blur-sm">
-                        <div className="m-2 rounded-xl bg-zinc-50 p-4">
+                        <div className="m-2 rounded-xl bg-zinc-50 dark:bg-zinc-950 p-4">
                           <div className="flex flex-col items-center text-center">
-                          <h3 className="text-center text-sm font-bold text-zinc-950 md:text-lg">Wadadli Jerk & Wadadli AM</h3>
+                          <h3 className="text-center text-sm font-bold text-zinc-950 dark:text-zinc-50 md:text-lg">Wadadli Jerk & Wadadli AM</h3>
                         {/* addy */}
                             <address className="mb-2">
                               <a
-                                className="text-sm font-bold text-wadadli transition-colors duration-200 ease-linear hover:text-zinc-950 md:text-base lg:text-lg"
+                                className="text-sm font-bold text-wadadli dark:text-orange-50 transition-colors duration-200 ease-linear hover:text-zinc-950 dark:hover:text-wadadli md:text-base lg:text-lg"
                                 href={mapsLink}
                               >
                                 419 Putnam Ave
@@ -85,21 +85,21 @@ const mapsLink = isMobileDevice()
                             </address>
                             {/* phone */}
                               <a
-                                className="text-xs font-semibold text-wadadli transition-colors duration-200 ease-linear hover:text-zinc-950 md:text-sm"
+                                className="text-xs font-semibold text-wadadli dark:text-orange-50 transition-colors duration-200 ease-linear hover:text-zinc-950 dark:hover:text-wadadli md:text-sm"
                                 href="+1 (347) 240-5913"
                               >
                                 +1 (347) 240-5913
                               </a>
                               {/* email */}
                               <a
-                                className="text-xs font-semibold text-wadadli transition-colors duration-200 ease-linear hover:text-zinc-950 md:text-sm"
+                                className="text-xs font-semibold text-wadadli dark:text-orange-50 transition-colors duration-200 ease-linear hover:text-zinc-950 dark:hover:text-wadadli md:text-sm"
                                 href="mailto:wadadlijerk@gmail.com"
                               >
                                 wadadlijerk@gmail.com
                               </a>
                               </div>
                               {/* hours */}
-                              <ol className="mt-2 text-xs text-zinc-950 md:text-sm lg:text-base">
+                              <ol className="mt-2 text-xs text-zinc-950 dark:text-zinc-50 md:text-sm lg:text-base">
                               <h3 className="text-sm font-medium text-zinc-950 md:text-lg">Hours</h3>
                               <li className='inline-block text-wadadli'>Mon: </li> Closed
                               <br/>

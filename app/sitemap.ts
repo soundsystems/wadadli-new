@@ -9,10 +9,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
+      url: 'https://wadadlijerk.com/#home',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: .7,
+    },
+    {
+      url: 'https://wadadlijerk.com/menu',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 1,
+    },
+    {
       url: 'https://wadadlijerk.com/contact',
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.8,
+      priority: 0.9,
+    },
+    {
+      url: 'https://wadadlijerk.com/contact#contactform',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
     },
     {
       url: 'https://wadadlijerk.com/shop',

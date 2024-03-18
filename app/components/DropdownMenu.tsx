@@ -15,11 +15,11 @@ return (             <div className="relative">
                           <> 
                           <motion.div  
                           whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}>
-                            <Menu.Button className={`group rounded-xl bg-zinc-50/70 p-2 text-wadadli shadow-lg shadow-zinc-950/75 backdrop-blur-sm transition-colors duration-300 ease-linear hover:bg-zinc-950/90 hover:drop-shadow-xl focus:outline-none
-                            ${open ? 'bg-zinc-950/90 stroke-orange-100 shadow-none drop-shadow-none' : ''
+                            <Menu.Button className={`group rounded-xl bg-zinc-50/70 p-2 text-wadadli shadow-lg shadow-zinc-950/75 backdrop-blur-sm transition-colors duration-300 ease-linear hover:bg-zinc-950/90 hover:drop-shadow-xl focus:outline-none dark:bg-zinc-950/90 dark:text-orange-50
+                            ${open ? 'bg-zinc-950/90 stroke-orange-50 shadow-none drop-shadow-none dark:stroke-wadadli transition-colors' : ''
                             }`}
                             > 
-                            <Bars3Icon className={`group h-5 w-5 group-hover:text-orange-100 ${open ? 'rotate-180 transition-transform duration-150 ease-linear' : '' 
+                            <Bars3Icon className={`group h-5 w-5 group-hover:text-orange-50 ${open ? 'rotate-180 transition-transform duration-150 ease-linear' : '' 
                             }`} />
                             </Menu.Button>
                             </motion.div>
@@ -31,7 +31,7 @@ return (             <div className="relative">
                                 initial={{ height: 0, opacity: 0 }}
                                 animate={{ height: "auto", opacity: 1, transition: {type: "spring", duration: .08, stiffness:83, bounce: 0.44}}}
                                 transition={{ duration: 0.09 }}
-                                className="absolute right-0 z-10 mt-2 rounded-xl border border-orange-100 bg-zinc-950/90 font-semibold text-orange-100 shadow focus:outline-none"
+                                className="absolute right-0 z-10 mt-2 rounded-xl border border-orange-50 bg-zinc-950/90 font-semibold text-orange-50 shadow focus:outline-none"
                               >
                                 <Menu.Item
                                 as={motion.div}
@@ -43,7 +43,7 @@ return (             <div className="relative">
                                       className={`${
                                         active ? "rounded-t-xl bg-zinc-950 text-wadadli transition-colors duration-300 ease-linear" : ""
                                       } block whitespace-nowrap px-5 py-3`}
-                                      href="/"
+                                      href="/menu"
                                     >
                                     Menu
                                     </Link>
@@ -75,20 +75,20 @@ return (             <div className="relative">
                                       catering
                                     </a>
                                   )}
-                                </Menu.Item>
+                                </Menu.Item> */}
                                 <Menu.Item>
                                   {({ active }) => (
                                     <a
                                       className={`${
                                         active ? "bg-zinc-950 text-wadadli transition-colors duration-300 ease-linear" : ""
                                       } block whitespace-nowrap px-5 py-3`}
-                                      href="#"
+                                      href="/events"
                                     >
-                                      private events
+                                      Events
                                     </a>
                                   )}
                                 </Menu.Item>
-                                <Menu.Item>
+                                {/* <Menu.Item>
                                   {({ active }) => (
                                     <a
                                       className={`${
@@ -99,7 +99,7 @@ return (             <div className="relative">
                                       gallery
                                     </a>
                                   )}
-                                </Menu.Item> */}
+                                </Menu.Item>  */}
                                 <Menu.Item
                                   as={motion.div}
                                   whileHover={{ scale: .95 }}

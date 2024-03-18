@@ -8,14 +8,6 @@
         @apply bg-slate-800;
     }
 
-.background { 
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-        background-color: #D4A883;
-}
-
 @media screen and (max-width: 768px) { 
     html {
     scroll-behavior: smooth;
@@ -26,22 +18,4 @@
         touch-action: manipulation;
         -webkit-tap-highlight-color: transparent;
         }
-}
-
-@media (max-width: 480px) {
-            .background {
-                background-image: url(../public/bg.webp);
-            }
-        }
-        
-        @media (min-width: 481px) and (max-width: 1024px) {
-            .background {
-                background-image: url(../public/bg.webp);
-            }
-        }
-        
-        @media (min-width: 1025px) {
-            .background {
-                background-image: url(../public/bg.webp);
-            }
-        }
+    }
