@@ -10,11 +10,14 @@ type Props = {}
 
 function Footer({}: Props) {
   return (
-    <footer className='sticky pb-6'>
-    <div className='mx-auto flex flex-col'>
+    <footer className='sticky pb-6 mt-8'>
+    <div className='mx-auto flex flex-col items-center'>
+      <div className='text-center text-xs text-zinc-50 bg-zinc-950 rounded-3xl w-fit px-4 py-2 lg:text-sm'>
+        Subscribe below to get notified about upcoming <a className='text-wadadli' href='/events'>events!</a>
+      </div>
 <Subscribe/>
     </div>
-   <motion.div className="flex justify-between px-6 pb-safe-bottom pt-4 md:px-20">
+   <motion.div className="flex justify-between px-6 pb-safe-bottom md:px-20">
         <motion.div
         whileTap={{ scale: 0.66 }} whileHover={{ scale: 1.3}}>
         <SocialIcon

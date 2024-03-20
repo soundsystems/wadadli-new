@@ -39,13 +39,13 @@ export default function Subscribe() {
         
 <motion.button
   type="submit"
-  className={`group relative mx-auto mt-4 inline-flex w-auto place-content-center place-items-baseline items-center divide-wadadli whitespace-nowrap rounded-xl bg-zinc-50/70 px-4 pb-5 pt-8 shadow-lg shadow-zinc-950/75 backdrop-blur-sm transition-colors duration-300 ease-linear focus-within:drop-shadow-xl hover:divide-orange-100 hover:bg-zinc-950/90 hover:drop-shadow-xl focus:outline-none dark:bg-zinc-950/90 ${error ? 'hidden' : ''}`}
+  className={`group relative mx-auto inline-flex w-auto place-content-center place-items-baseline items-center divide-wadadli whitespace-nowrap rounded-xl bg-zinc-50/70 px-4 pb-5 pt-10 shadow-lg shadow-zinc-950/75 backdrop-blur-sm transition-colors duration-300 ease-linear focus-within:drop-shadow-xl hover:divide-orange-50 hover:bg-zinc-950/90 hover:drop-shadow-xl focus:outline-none dark:bg-zinc-950/90 ${error ? 'hidden' : ''}`}
   disabled={success}
   whileHover={{ scale: 1.1}} whileTap={{ scale: 0.9 }}>
 
   {!success ? (
     <div className="">
-      <span className="text-sm font-semibold text-wadadli transition-colors duration-300 ease-linear group-hover:text-orange-100 md:text-base">
+      <span className="text-sm font-semibold text-wadadli transition-colors duration-300 ease-linear group-hover:text-orange-50 md:text-base">
         {loading ? (
             <SpinnerInfinity size={50} thickness={148} speed={140} color="rgba(253, 111, 0, 1)" secondaryColor="rgba(253, 111, 0, 0.08)" />
         ) : (
@@ -72,10 +72,10 @@ export default function Subscribe() {
     </span>
   )}
   {!success && (
-      <ArrowRightCircleIcon className={`h-8 w-8 text-wadadli transition-colors duration-300 ease-linear group-hover:text-orange-100 md:stroke-2 ${loading ? 'hidden' : ''}`} />
+      <ArrowRightCircleIcon className={`h-8 w-8 text-wadadli transition-colors duration-300 ease-linear group-hover:text-orange-50 md:stroke-2 ${loading ? 'hidden' : ''}`} />
   )}
   {!success && (   <motion.div
-        className="absolute top-0 appearance-none pl-4 pt-4 font-semibold text-zinc-950 opacity-0 transition-colors duration-300 ease-linear group-hover:text-wadadli dark:text-orange-50 dark:group-hover:text-wadadli"
+        className="absolute top-0 appearance-none pl-4 pt-4 font-semibold text-zinc-950 opacity-0 transition-colors duration-300 ease-linear group-hover:text-wadadli dark:text-zinc-50 dark:group-hover:text-wadadli"
         animate={{ opacity: 1, y: -10 }}
         transition={{   ease: "linear",
         duration: .08,

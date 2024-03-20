@@ -17,7 +17,7 @@ export default function HomePage() {
         {/* Hero */}
         <section id="menu" className="flex h-full flex-col items-center">
            {/* <Map /> */}
-          <Image src={"/menu.jpeg"} alt="Wadadli Menu" height={2000} width={1000} priority={true} quality={90} className="md:rounded-3xl"/>
+          <Image src={"/menu.jpeg"} alt="Wadadli Menu" height={2000} width={1000} priority={true} quality={90} className="max-w-4xl md:rounded-3xl"/>
           {/* <Image src={mobile} alt="Wadadli Jerk Menu" height={6551} width={1600} className="md:hidden"/> */}
         </section>
           {/* <section id="featured" className="h-screen snap-end">
